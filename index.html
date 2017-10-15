@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>Peter Sharp's Portfolio</title>
+        <base href="/">
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <main-nav></main-nav>
+
+            <main class="book">
+                <div class="content-wrapper">
+                  <div ui-view class="view-frame"><span class="loader"></span></div>
+
+                    <footer>
+                        <hr>
+                        <span>To find out more about what I can do for you; <a ui-sref="contact">contact me</a></span>
+                    </footer>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
