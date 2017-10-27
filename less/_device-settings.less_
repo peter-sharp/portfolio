@@ -1,0 +1,11 @@
+/* measurements */
+@mainWidth_desktop: 1500px;
+@mainWidth_laptop: 1400px;
+@mainWidth_tablet: 1200px;
+@mainWidth_mobile: 100%;
+
+
+/* breakpoints*/
+@laptopPoint: ~"max-width: 1700px";
+@tabletPoint: ~"max-width: 1500px";
+@mobilePoint: ~"max-width: 1200px";

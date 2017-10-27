@@ -1,0 +1,8 @@
+@baseBrown: #6b5453;
+@baseGrey: desaturate(@baseBrown, 100%);
+@brightOrange: #C33A19;
+@linkColor:#6A5554;
+@activeLinkColor:lighten(@linkColor,40);
+@primaryBlue: #3C60BF;
+
+@paleShadow: rgba(0,25,50,0.4);

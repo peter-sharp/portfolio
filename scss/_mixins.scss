@@ -1,0 +1,65 @@
+/* ------------------mixins */
+/* icons */
+@mixin icon_base($posX, $posY, $sizeX:$iconSizeX_small, $sizeY:$iconSizeY_small) {
+  background-image: url($icons);
+  background-size: '#{$sizeX}px' '#{$sizeY}px';
+  background-position: '#{$posX}px' '#{$posY}px';
+  background-repeat: no-repeat;
+}
+
+/* image elements */
+@mixin imageElement_nav_desktop(){
+  background-image:url('#{$imageRoot}menu_ribbon_desktop.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 64px;
+  height: 268px;
+}
+
+@mixin imageElement_nav_mobile(){
+  background-image:url('#{$imageRoot}menu_ribbon_mobile.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 76px;
+  height: 97px;
+}
+
+/* font effects */
+
+@mixin embossText($color, $amount: 1, $offset: 1) {
+  text-shadow: 1px 1px desaturate( lighten($color, 30%), 10%), "-#{$offset}px" "-#{$offset}px" "#{$amount}px" saturate( darken($color, 15%), 10%);
+}
+
+/* utilities*/
+
+@mixin border-image($image, $imageSize, $borderSize: $imageSize, $topSize: 0) {
+  padding: 0;
+  @if $topSize > 0 {
+    border: 0 solid transparent;
+    border-top: $topSize + $mainUnit solid transparent;
+  }
+  @if $topSize == 0 {
+    border:  $borderSize + $mainUnit solid transparent;
+  }
+  -webkit-border-image: url($image) $imageSize round; /* Safari 3.1-5 */
+  -o-border-image: url($image) $imageSize round; /* Opera 11-12.1 */
+  border-image: url($image) $imageSize round;
+}
+
+
+@mixin image-frame(){
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px $paleShadow;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid $paleShadow;
+  border-right: 1px solid $paleShadow;
+}
+
+@mixin embossElement($color, $amount: 3, $offset: 3) {
+  $light-amount: 5 - $amount;
+  $light-offset: 4 - $offset;
+  box-shadow: inset  (-1 * $light-offset + $mainUnit)  (-1 * $light-offset + $mainUnit) $light-amount + $mainUnit desaturate( lighten($color, 30%), 20%), inset  $offset + $mainUnit $offset + $mainUnit $amount + $mainUnit saturate( darken($color, 6%), 10%);
+}

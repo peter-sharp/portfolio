@@ -1,0 +1,21 @@
+@import "device-settings.scss";
+
+$gutter-size: 12px;
+/* paths */
+$imageRoot: '../img/style/';
+/* colors */
+@import "colors.scss";
+/* icons */
+$icons: '#{$imageRoot}icons.svg';
+$iconSizeX_small: 24;
+$iconSizeY_small: 108;
+$iconSizeX_big: 144;
+$iconSizeY_big: 130;
+/* others */
+$mainUnit: 0px;
+
+/* font sizes */
+$text-base: 14px;
+$text-med:     $text-base * 2;
+$text-lrg:     $text-base * 4;
+$text-x-lrg:   $text-base * 8;
