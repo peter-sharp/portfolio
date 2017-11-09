@@ -74,5 +74,6 @@ module.exports = {
 	plugins: [
 		// new UglifyJSPlugin(),
 		new ExtractTextPlugin('bundle.[contentHash].css')
-	]
+	],
+	devtool: 'source-map'
 };
