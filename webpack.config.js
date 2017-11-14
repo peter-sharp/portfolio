@@ -23,7 +23,10 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-	entry: './src/index.js',
+	entry: [
+		'./src/index.js',
+		'./scss/app.scss'
+  ],
 
 	output: {
 		filename: '[name].bundle.js',
@@ -34,6 +37,14 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+			 test: /\.(png|jpg|gif|eot|ttf|woff|woff2|svg)$/,
+			 loader: "file-loader",
+			 options: {
+				 name: '[name].[ext]'
+			 }
+
+		 },
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
@@ -46,23 +57,9 @@ module.exports = {
 			{
 				test: /\.(scss|css)$/,
 
-				use: ExtractTextPlugin.extract({
-					use: [
-						{
-							loader: 'css-loader',
-							options: {
-								sourceMap: true
-							}
-						},
-						{
-							loader: 'sass-loader',
-							options: {
-								sourceMap: true
-							}
-						}
-					],
-					fallback: 'style-loader'
-				})
+				use: ExtractTextPlugin.extract([
+          'css-loader?sourceMap&sourceMapContents',
+          'resolve-url-loader', 'sass-loader?sourceMap&sourceMapContents'])
 			}
 		]
 	},
@@ -73,7 +70,7 @@ module.exports = {
 	},
 	plugins: [
 		// new UglifyJSPlugin(),
-		new ExtractTextPlugin('bundle.[contentHash].css')
+		new ExtractTextPlugin('[name].bundle.css')
 	],
 	devtool: 'source-map'
 };
