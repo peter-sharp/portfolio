@@ -1,19 +1,19 @@
 import html from 'choo/html'
 
 import galleryView from 'views/gallery'
+import searchView from 'views/search'
 
-export default function homeView(state, events) {
+export default function homeView(state, emit) {
   return html`
       <div>
         <div class="ink-sepia banner">
             <div class="title">
-              <img class="logo" src="{{pictureBasePath}}style/logo_PeterSharpAll.svg" alt="Peter Sharp's portfolio logo">
+              <img class="logo" src="${state.imgPath}style/logo_PeterSharpAll.svg" alt="Peter Sharp's portfolio logo">
 
             </div>
-            <select-box sb-options=",3D,illustration,web-design,animation" name="search" id="">
-            </select-box>
+            ${searchView(state, emit)}
         </div>
 
-        ${galleryView(state, events)}
+        ${galleryView(state, emit)}
       </div>`
 }
