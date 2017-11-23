@@ -1,9 +1,11 @@
 import html from 'choo/html'
 
-export default function contactView(state, events) {
+import contactForm from 'views/contactForm'
+
+export default function contactView(state, emit) {
   return html`<div>
                   <div class="portrait">
-                      <img class="responsive" src="{{pictureBasePath}}content/peter-like-a-sir.png"/>
+                      <img class="responsive" src="${state.imgPath}content/peter-like-a-sir.png"/>
                   </div>
 
                   <p class="self-intro drop-cap">
@@ -19,6 +21,6 @@ export default function contactView(state, events) {
                       Send me a message; <br>I'd love to hear from you.
                   </p>
                   <hr class="header"/>
-                  <!--contact-form></contact-form-->
+                  ${contactForm(state, emit)}
               </div>`
 }
