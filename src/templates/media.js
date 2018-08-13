@@ -1,6 +1,7 @@
 import html from 'choo/html'
 
 export default function mediaView(state, events) {
+  debugger
   return html`<div>
                 <h2>{{item.title}}</h2>
                 <div class="image-viewer">
@@ -10,7 +11,7 @@ export default function mediaView(state, events) {
                     </a>
                   </div>
                   <div class="media-frame" >
-                    <img ng-style="{ width: width, height: height }" src="{{item.image.src}}" best-fit data-width="{{ item.image.width }}" data-height="{{ item.image.height }}" ></img>
+                    <img ng-style="{ width: width, height: height }" src="{{item.image.src}}" best-fit data-width="{{ item.image.width }}" data-height="{{ item.image.height }}" />
                   </div>
                   <div class="page-turner next" >
                     <a ui-sref="current_page({id: page.next})" id="next"  animate class="" ng-class="(animating == 'next') ? 'animate' : ''">
@@ -23,7 +24,7 @@ export default function mediaView(state, events) {
                     <div class="tags">
                       <h3>tags</h3>
                       <ul>
-                      <li ng-repeat="tag in item.tags">{{tag}}</li>
+                        <li ng-repeat="tag in item.tags">{{tag}}</li>
                       </ul>
                     </div>
                   </div>

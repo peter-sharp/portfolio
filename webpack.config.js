@@ -22,6 +22,8 @@ const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const FileListPlugin = require('./webpack-plugins/filelist.js')
+
 module.exports = {
 	entry: [
 		'./src/index.js',
@@ -30,7 +32,7 @@ module.exports = {
 
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, '.')
+		path: path.resolve(__dirname, './public')
 	},
 	resolve: {
 		modules: [path.resolve(__dirname, "src"), "node_modules"]
@@ -69,8 +71,8 @@ module.exports = {
 	  port: 9000
 	},
 	plugins: [
-		// new UglifyJSPlugin(),
-		new ExtractTextPlugin('[name].bundle.css')
+		new ExtractTextPlugin('[name].bundle.css'),
+		new FileListPlugin()
 	],
 	devtool: 'source-map'
 };

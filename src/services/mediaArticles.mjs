@@ -1,5 +1,5 @@
-import serviceCreator from 'services/serviceCreator';
-var mediaArticleService = serviceCreator({
+import serviceCreator from 'serviceCreator';
+const mediaArticleService = serviceCreator({
   list(method, params, data, location) {
     if('get' == method) {
       return fetch('https://raw.githubusercontent.com/peter-sharp/portfolio/master/media/media.json')
