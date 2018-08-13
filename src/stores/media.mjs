@@ -1,6 +1,4 @@
-import mediaArticleService from 'services/mediaArticles'
-
-export default function mediaStore(state, events){
+export default function mediaStore(mediaArticleService, state, events){
   var mediaArticlesAll = []
 
   state.mediaArticles = []

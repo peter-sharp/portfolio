@@ -1,13 +1,15 @@
 import {briefcase} from 'briefcase'
 
 import Choo from 'choo'
-import html from 'choo/html'
 
-import mainView from 'views/main'
-import homeView from 'views/home'
-import contactView from 'views/contact'
-import notFoundView from 'views/notFound'
-import mediaView from 'views/media'
+import mediaArticleService from 'services/mediaArticles'
+import pageService from 'services/pages'
+
+import mainView from 'templates/main'
+import homeView from 'templates/home'
+import contactView from 'templates/contact'
+import notFoundView from 'templates/notFound'
+import mediaView from 'templates/media'
 import menuStore from 'stores/menu'
 import mainStore from 'stores/main'
 import mediaStore from 'stores/media'
@@ -18,8 +20,8 @@ const app = Choo()
 
 app.use(mainStore)
 app.use(menuStore)
-app.use(pagesStore)
-app.use(mediaStore)
+app.use(pagesStore.bind(null, pageService))
+app.use(mediaStore.bind(null, mediaArticleService))
 
 app.route('/', mainView.bind(null, homeView))
 app.route('/contact', mainView.bind(null, contactView))
