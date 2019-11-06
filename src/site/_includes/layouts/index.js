@@ -1,3 +1,4 @@
+import html from '../html'
 
 export function render({ content }) {
 return html`<!DOCTYPE html>
@@ -12,7 +13,9 @@ return html`<!DOCTYPE html>
             <link rel="stylesheet" href="main.bundle.css">
         </head>
         <body>
-            <main class="wrapper js-app"></main>
+            <main class="wrapper js-app">
+            ${content}
+            </main>
             <script src="main.bundle.js"></script>
         </body>
     </html>`

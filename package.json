@@ -5,9 +5,8 @@
   "main": "js/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress --color",
-    "watch:build": "webpack --progress --color --watch",
-    "dev": "webpack-dev-server"
+    "build": "npx eleventy --experimental-modules",
+    "dev": "pnpx eleventy --serve --experimental-modules"
   },
   "repository": {
     "type": "git",
