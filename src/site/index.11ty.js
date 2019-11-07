@@ -1,7 +1,7 @@
-export const data = {
+module.exports.data = {
     'template': 'layouts/index.js'
 }
 
-export function render({ content }) {
+module.exports.render = function render({ content }) {
     return `hi`
 }

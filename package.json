@@ -5,8 +5,8 @@
   "main": "js/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx eleventy --experimental-modules",
-    "dev": "pnpx eleventy --serve --experimental-modules"
+    "make": "npx eleventy",
+    "dev": "pnpx eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "resolve-url-loader": "^2.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
+    "typescript": "^3.7.2",
     "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"

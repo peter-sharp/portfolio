@@ -1,6 +1,6 @@
-import html from '../html'
+const html = require('../html')
 
-export function render({ content }) {
+module.exports.render = function render({ content }) {
 return html`<!DOCTYPE html>
     <html lang="en" ng-app="portfolioApp">
         <head>
