@@ -1,5 +1,8 @@
-const html =  require('choo/html')
+const html =  require('choo/html');
+const raw =  require('choo/html/raw');
 
-module.exports = function htmlProxy(...args) {
-    return html.apply(this, args).toString();
-}
+
+
+module.exports.raw = raw
+
+module.exports.html = html
