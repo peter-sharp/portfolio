@@ -10,10 +10,11 @@ tags:
   - illustration
   - character
   - digital
+  - gallery
 mediaPaths:
-  original: content/50th-invite.png
-  large: content/sizes/50th-invite-large.png
-  medium: content/sizes/50th-invite-medium.png
-  small: content/sizes/50th-invite-small.png
+  original: 50th-invite.png
+  large: sizes/50th-invite-large.png
+  medium: sizes/50th-invite-medium.png
+  small: sizes/50th-invite-small.png
 ---
 My father's 50th birthday invitation

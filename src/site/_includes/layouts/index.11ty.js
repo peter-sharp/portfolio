@@ -11,7 +11,7 @@ return html`<!DOCTYPE html>
             <link rel="icon" type="image/png" href="favicon.png">
             <title>${title} | ${site.title}</title>
             <base href="/">
-            <link rel="stylesheet" href="main.css">
+            <link rel="stylesheet" href="/style.css">
         </head>
         <body>
             <header>
@@ -28,8 +28,10 @@ return html`<!DOCTYPE html>
             <main>
             ${raw(content)}
             </main>
-             <footer>
+             <footer class="section">
+                 <div class="section__inside">
                  <a href="/contact">Send me a telegram</a>
+                 </div>
             </footer>
         </body>
     </html>`.toString()

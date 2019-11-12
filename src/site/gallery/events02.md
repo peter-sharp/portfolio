@@ -10,10 +10,11 @@ tags:
   - illustration
   - character
   - digital
+  - gallery
 mediaPaths:
-  original: content/me-in-the-box.png
-  large: content/sizes/me-in-the-box-large.png
-  medium: content/sizes/me-in-the-box-medium.png
-  small: content/sizes/me-in-the-box-small.png
+  original: me-in-the-box.png
+  large: sizes/me-in-the-box-large.png
+  medium: sizes/me-in-the-box-medium.png
+  small: sizes/me-in-the-box-small.png
 ---
 My 21st birthday invitation

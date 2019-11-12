@@ -10,10 +10,11 @@ tags:
   - illustration
   - character
   - digital
+  - gallery
 mediaPaths:
-  original: content/avon-beauty.png
-  large: content/sizes/avon-beauty-large.png
-  medium: content/sizes/avon-beauty-medium.png
-  small: content/sizes/avon-beauty-small.png
+  original: avon-beauty.png
+  large: sizes/avon-beauty-large.png
+  medium: sizes/avon-beauty-medium.png
+  small: sizes/avon-beauty-small.png
 ---
 A business card for beauty products

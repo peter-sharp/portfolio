@@ -12,10 +12,11 @@ tags:
   - unvanquished
   - digital
   - game
+  - sketch
 mediaPaths:
-  original: content/Defence-computer_concepts.1.png
-  large: content/sizes/Defence-computer_concepts.1-large.png
-  medium: content/sizes/Defence-computer_concepts.1-medium.png
-  small: content/sizes/Defence-computer_concepts.1-small.png
+  original: Defence-computer_concepts.1.png
+  large: sizes/Defence-computer_concepts.1-large.png
+  medium: sizes/Defence-computer_concepts.1-medium.png
+  small: sizes/Defence-computer_concepts.1-small.png
 ---
 Some concepts for one of the Human buildings buildable in Unvanquished; an open source game similar to Natural Selection.

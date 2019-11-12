@@ -11,10 +11,11 @@ tags:
   - digital
   - anime
   - animation
+  - gallery
 mediaPaths:
-  original: content/dimitri-sheet.jpg
-  large: content/sizes/dimitri-sheet-large.jpg
-  medium: content/sizes/dimitri-sheet-medium.jpg
-  small: content/sizes/dimitri-sheet-small.jpg
+  original: dimitri-sheet.jpg
+  large: sizes/dimitri-sheet-large.jpg
+  medium: sizes/dimitri-sheet-medium.jpg
+  small: sizes/dimitri-sheet-small.jpg
 ---
 A character sheet for an Anime styled character.

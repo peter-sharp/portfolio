@@ -1,0 +1,48 @@
+body {
+    font-size: 18px;
+}
+
+.stack > * + * {
+    margin-top: 1em;
+}
+
+.image--responsive {
+    width: 100%;
+    height: auto;
+}
+.image--small {
+    width: 10em;
+    height: auto;
+}
+
+.section {
+    padding: 1em;
+}
+.section__inside {
+    margin: auto;
+    max-width: 70ch;
+}
+.input-group > textarea,
+.input-group > input {
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.nav-main ul {
+    display: flex;
+    gap: 1em;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.nav-item--active {
+    border-bottom: 0.1em solid currentColor;
+}

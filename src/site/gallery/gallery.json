@@ -1,0 +1,4 @@
+{
+    "tags": ["gallery"],
+    "layout": "layouts/post.11ty.js"
+}

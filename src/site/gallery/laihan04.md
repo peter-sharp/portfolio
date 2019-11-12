@@ -11,10 +11,11 @@ tags:
   - digital
   - laihan
   - comic
+  - gallery
 mediaPaths:
-  original: content/merchant-house.jpg
-  large: content/sizes/merchant-house-large.jpg
-  medium: content/sizes/merchant-house-medium.jpg
-  small: content/sizes/merchant-house-small.jpg
+  original: merchant-house.jpg
+  large: sizes/merchant-house-large.jpg
+  medium: sizes/merchant-house-medium.jpg
+  small: sizes/merchant-house-small.jpg
 ---
 A building in an oriental steampunk world.

@@ -4,24 +4,24 @@ dependencies:
 devDependencies:
   '@11ty/eleventy': 0.9.0
   babel-core: 6.26.3
-  babel-loader: 7.1.5
+  babel-loader: 7.1.5_babel-core@6.26.3+webpack@3.12.0
   babel-preset-es2015: 6.24.1
   css-loader: 0.28.11
-  extract-text-webpack-plugin: 3.0.2
-  file-loader: 1.1.11
+  extract-text-webpack-plugin: 3.0.2_webpack@3.12.0
+  file-loader: 1.1.11_webpack@3.12.0
   front-matter: 2.3.0
   gulp: 3.9.1
   gulp-cli: 2.2.0
   js-yaml: 3.13.1
   node-sass: 4.13.0
   resolve-url-loader: 2.3.2
-  sass-loader: 6.0.7
+  sass-loader: 6.0.7_node-sass@4.13.0+webpack@3.12.0
   style-loader: 0.19.1
   typescript: 3.7.2
-  uglifyjs-webpack-plugin: 1.3.0
-  webpack: 3.12.0
-  webpack-dev-server: 2.11.5
-lockfileVersion: 5
+  uglifyjs-webpack-plugin: 1.3.0_webpack@3.12.0
+  webpack: 3.12.0_webpack@3.12.0
+  webpack-dev-server: 2.11.5_webpack@3.12.0
+lockfileVersion: 5.1
 packages:
   /@11ty/eleventy/0.9.0:
     dependencies:
@@ -63,13 +63,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-6BW59Fzf2sXrtnS5bUey5JbbiOSZCujG7/6/quj4ooLYIFV3djBZpyJg6mQmlyefFIacvC0GDP+9QT+QQ0O74g==
-  /@babel/parser/7.7.2:
+  /@babel/parser/7.7.3:
     dev: true
     engines:
       node: '>=6.0.0'
     hasBin: true
     resolution:
-      integrity: sha512-DDaR5e0g4ZTb9aP7cpSZLkACEBdoLGwJDWgHtBhrGX7Q1RjhdoMOfexICj5cqTAtpowjGQWfcvfnQG7G2kAB5w==
+      integrity: sha512-bqv+iCo9i+uLVbI0ILzKkvMorqxouI+GbV13ivcARXn9NNEabi2IEz912IgNpT/60BNXac5dgcfjb94NjsF33A==
   /@nodelib/fs.scandir/2.1.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.3
@@ -108,7 +108,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
-  /@typescript-eslint/typescript-estree/2.6.1_typescript@3.7.2:
+  /@typescript-eslint/typescript-estree/2.7.0_typescript@3.7.2:
     dependencies:
       debug: 4.1.1
       glob: 7.1.6
@@ -116,6 +116,7 @@ packages:
       lodash.unescape: 4.0.1
       semver: 6.3.0
       tsutils: 3.17.1_typescript@3.7.2
+      typescript: 3.7.2
     dev: true
     engines:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
@@ -125,7 +126,7 @@ packages:
       typescript:
         optional: true
     resolution:
-      integrity: sha512-+sTnssW6bcbDZKE8Ce7VV6LdzkQz2Bxk7jzk1J8H1rovoTxnm6iXvYIyncvNsaB/kBCOM63j/LNJfm27bNdUoA==
+      integrity: sha512-vVCE/DY72N4RiJ/2f10PTyYekX2OLaltuSIBqeHYI44GQ940VCYioInIb8jKMrK9u855OEJdFC+HmWAZTnC+Ag==
   /a-sync-waterfall/1.0.1:
     dev: true
     resolution:
@@ -702,11 +703,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-NHHenK7DiOXIUOWX5Yom3fN2ArI=
-  /babel-loader/7.1.5:
+  /babel-loader/7.1.5_babel-core@6.26.3+webpack@3.12.0:
     dependencies:
+      babel-core: 6.26.3
       find-cache-dir: 1.0.0
       loader-utils: 1.2.3
       mkdirp: 0.5.1
+      webpack: 3.12.0_webpack@3.12.0
     dev: true
     engines:
       node: '>=4'
@@ -1305,14 +1308,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-JuYe0UIvtw3ULm42cp7VHYVf6Nk=
-  /buffer/4.9.1:
+  /buffer/4.9.2:
     dependencies:
       base64-js: 1.3.1
       ieee754: 1.1.13
       isarray: 1.0.0
     dev: true
     resolution:
-      integrity: sha1-bRu2AbB6TvztlwlBMgkwJ8lbwpg=
+      integrity: sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==
   /builtin-status-codes/3.0.0:
     dev: true
     resolution:
@@ -1501,7 +1504,7 @@ packages:
     engines:
       node: '>= 8.10.0'
     optionalDependencies:
-      fsevents: 2.1.1
+      fsevents: 2.1.2
     resolution:
       integrity: sha512-dGmKLDdT3Gdl7fBUe8XK+gAtGmzy5Fn0XkkWQuYxGIgWVPPse2CxFA5mtrlD0TOHaHjEUqkWNyP1XdHoJES/4A==
   /choo/6.13.3:
@@ -2344,16 +2347,17 @@ packages:
     dev: true
     resolution:
       integrity: sha1-UK7n24uruZA4HwEMY/q7pbWOVM0=
-  /detective-typescript/5.6.1:
+  /detective-typescript/5.7.0:
     dependencies:
-      '@typescript-eslint/typescript-estree': 2.6.1_typescript@3.7.2
+      '@typescript-eslint/typescript-estree': 2.7.0_typescript@3.7.2
+      ast-module-types: 2.5.0
       node-source-walk: 4.2.0
       typescript: 3.7.2
     dev: true
     engines:
       node: '>=6.0'
     resolution:
-      integrity: sha512-C2AaNupyz8gNeI3fiYQhIceDBP73IgXwFXAwSHwzqDE9Osc9oXb2cIEc05Nr3eonAK747FwxqtnzO16tv67zsw==
+      integrity: sha512-4SQeACXWAjIOsd2kJykPL8gWC9nVA+z8w7KtAdtd/7BCpDfrpI2ZA7pdhsmHv/zxf3ofeqpYi72vCkZ65bAjtA==
   /dev-ip/1.0.1:
     dev: true
     engines:
@@ -2617,13 +2621,13 @@ packages:
       integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==
   /es-abstract/1.16.0:
     dependencies:
-      es-to-primitive: 1.2.0
+      es-to-primitive: 1.2.1
       function-bind: 1.1.1
       has: 1.0.3
       has-symbols: 1.0.0
       is-callable: 1.1.4
       is-regex: 1.0.4
-      object-inspect: 1.6.0
+      object-inspect: 1.7.0
       object-keys: 1.1.1
       string.prototype.trimleft: 2.1.0
       string.prototype.trimright: 2.1.0
@@ -2632,7 +2636,7 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-xdQnfykZ9JMEiasTAJZJdMWCQ1Vm00NBw79/AWi7ELfZuuPCSOMDZbT9mkOfSctVtfhb+sAAzrm+j//GjjLHLg==
-  /es-to-primitive/1.2.0:
+  /es-to-primitive/1.2.1:
     dependencies:
       is-callable: 1.1.4
       is-date-object: 1.0.1
@@ -2641,7 +2645,7 @@ packages:
     engines:
       node: '>= 0.4'
     resolution:
-      integrity: sha512-qZryBOJjV//LaxLTV6UC//WewneB3LcXOL9NP++ozKVXsIIIpm/2c13UDiD9Jp2eThsecw9m3jPqDwTyobcdbg==
+      integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==
   /es5-ext/0.10.52:
     dependencies:
       es6-iterator: 2.0.3
@@ -2938,11 +2942,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-Nmb6QXkELsuBr24CJSkilo6UHHgbekK5UiZgfE6UHD3Eb27YC6oD+bhcT+tJ6cl8dmsgdQxnWlcry8ksBIBLpw==
-  /extract-text-webpack-plugin/3.0.2:
+  /extract-text-webpack-plugin/3.0.2_webpack@3.12.0:
     dependencies:
       async: 2.6.3
       loader-utils: 1.2.3
       schema-utils: 0.3.0
+      webpack: 3.12.0_webpack@3.12.0
       webpack-sources: 1.4.3
     deprecated: 'Deprecated. Please use https://github.com/webpack-contrib/mini-css-extract-plugin'
     dev: true
@@ -2958,12 +2963,6 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-lpGEQOMEGnpBT4xS48V06zw+HgU=
-  /extsprintf/1.4.0:
-    dev: true
-    engines:
-      '0': node >=0.6.0
-    resolution:
-      integrity: sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
   /fancy-log/1.3.3:
     dependencies:
       ansi-gray: 0.1.1
@@ -3035,10 +3034,11 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-r70c72ln2YHzQINNfxDp02hAhbGkt1HffZ+Du8oetWDLjDtFja/Lm10lUaSh9e+wD+7VDvPee0b0C9SAy8pWZg==
-  /file-loader/1.1.11:
+  /file-loader/1.1.11_webpack@3.12.0:
     dependencies:
       loader-utils: 1.2.3
       schema-utils: 0.4.7
+      webpack: 3.12.0_webpack@3.12.0
     dev: true
     engines:
       node: '>= 4.3 < 5.0.0 || >= 5.10'
@@ -3326,6 +3326,7 @@ packages:
       - node-pre-gyp
     dependencies:
       nan: 2.14.0
+    deprecated: 'One of your dependencies needs to upgrade to fsevents v2: 1) Proper nodejs v10+ support 2) No more fetching binaries from AWS, smaller package size'
     dev: true
     engines:
       node: '>=4.0'
@@ -3333,13 +3334,13 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-oeyj2H3EjjonWcFjD5NvZNE9Rqe4UW+nQBU2HNeKw0koVLEFIhtyETyAakeAM3de7Z/SW5kcA+fZUait9EApnw==
-  /fsevents/2.1.1:
+  /fsevents/2.1.2:
     dev: true
     engines:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     optional: true
     resolution:
-      integrity: sha512-4FRPXWETxtigtJW/gxzEDsX1LVbPAM93VleB83kZB+ellqbHMkyt2aJfuzNLRvFPnGi6bcE5SvfxgbXPeKteJw==
+      integrity: sha512-R4wDiBwZ0KzpgOWetKDug1FZcYhqYnUYKtfZYt4mD5SBz76q0KR4Q9o7GIPamsVPGmW3EYPPJ0dOOjvx32ldZA==
   /fstream/1.0.12:
     dependencies:
       graceful-fs: 4.2.3
@@ -5618,7 +5619,7 @@ packages:
     dependencies:
       assert: 1.5.0
       browserify-zlib: 0.2.0
-      buffer: 4.9.1
+      buffer: 4.9.2
       console-browserify: 1.2.0
       constants-browserify: 1.0.0
       crypto-browserify: 3.12.0
@@ -5670,7 +5671,7 @@ packages:
       integrity: sha512-W1XBrvoJ1dy7VsvTAS5q1V45lREbTlZQqFbiHb3R3OTTCma0XBtuG6xZ6Z4506nR4lmHPTqVRwxT6KgtWC97CA==
   /node-source-walk/4.2.0:
     dependencies:
-      '@babel/parser': 7.7.2
+      '@babel/parser': 7.7.3
     dev: true
     engines:
       node: '>=6.0'
@@ -5807,10 +5808,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-fn2Fi3gb18mRpBupde04EnVOmYw=
-  /object-inspect/1.6.0:
+  /object-inspect/1.7.0:
     dev: true
     resolution:
-      integrity: sha512-GJzfBZ6DgDAmnuaM3104jR4s1Myxr3Y3zfIyN4z3UdqN69oSRacNK8UhnobDdC+7J2AHCjGwxQubNJfE70SXXQ==
+      integrity: sha512-a7pEHdh1xKIAgTySUGgLMx/xwDZskN1Ud6egYYN3EdRW4ZMPNEDUTF+hwy2LUC+Bl+SyLXANnwz/jyh/qutKUw==
   /object-is/1.0.1:
     dev: true
     engines:
@@ -6571,7 +6572,7 @@ packages:
       detective-sass: 3.0.1
       detective-scss: 2.0.1
       detective-stylus: 1.0.0
-      detective-typescript: 5.6.1
+      detective-typescript: 5.7.0
       module-definition: 3.2.0
       node-source-walk: 4.2.0
     dev: true
@@ -7353,13 +7354,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha1-E/vWPNHK8JCLn9k0dq1DpR0eC0k=
-  /sass-loader/6.0.7:
+  /sass-loader/6.0.7_node-sass@4.13.0+webpack@3.12.0:
     dependencies:
       clone-deep: 2.0.2
       loader-utils: 1.2.3
       lodash.tail: 4.1.1
       neo-async: 2.6.1
+      node-sass: 4.13.0
       pify: 3.0.0
+      webpack: 3.12.0_webpack@3.12.0
     dev: true
     engines:
       node: '>= 4.3 < 5.0.0 || >= 5.10'
@@ -8489,10 +8492,11 @@ packages:
     optional: true
     resolution:
       integrity: sha1-bgkk1r2mta/jSeOabWMoUKD4grc=
-  /uglifyjs-webpack-plugin/0.4.6:
+  /uglifyjs-webpack-plugin/0.4.6_webpack@3.12.0:
     dependencies:
       source-map: 0.5.7
       uglify-js: 2.8.29
+      webpack: 3.12.0_webpack@3.12.0
       webpack-sources: 1.4.3
     dev: true
     engines:
@@ -8502,7 +8506,7 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha1-uVH0q7a9YX5m9j64kUmOORdj4wk=
-  /uglifyjs-webpack-plugin/1.3.0:
+  /uglifyjs-webpack-plugin/1.3.0_webpack@3.12.0:
     dependencies:
       cacache: 10.0.4
       find-cache-dir: 1.0.0
@@ -8510,6 +8514,7 @@ packages:
       serialize-javascript: 1.9.1
       source-map: 0.6.1
       uglify-es: 3.3.9
+      webpack: 3.12.0_webpack@3.12.0
       webpack-sources: 1.4.3
       worker-farm: 1.7.0
     dev: true
@@ -8699,7 +8704,7 @@ packages:
     dependencies:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
-      extsprintf: 1.4.0
+      extsprintf: 1.3.0
     dev: true
     engines:
       '0': node >=0.6.0
@@ -8769,13 +8774,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-O84QOnr0icsbFGLS0O3bI5FswxzRr8/gHwWkDlQFskhSPryQXvrTMxjxGP4+iWYoauLoBvfDpkrOauZ+0iZpDA==
-  /webpack-dev-middleware/1.12.2:
+  /webpack-dev-middleware/1.12.2_webpack@3.12.0:
     dependencies:
       memory-fs: 0.4.1
       mime: 1.6.0
       path-is-absolute: 1.0.1
       range-parser: 1.2.1
       time-stamp: 2.2.0
+      webpack: 3.12.0_webpack@3.12.0
     dev: true
     engines:
       node: '>=0.6'
@@ -8783,7 +8789,7 @@ packages:
       webpack: ^1.0.0 || ^2.0.0 || ^3.0.0
     resolution:
       integrity: sha512-FCrqPy1yy/sN6U/SaEZcHKRXGlqU0DUaEBL45jkUYoB8foVb6wCnbIJ1HKIx+qUFTW+3JpVcCJCxZ8VATL4e+A==
-  /webpack-dev-server/2.11.5:
+  /webpack-dev-server/2.11.5_webpack@3.12.0:
     dependencies:
       ansi-html: 0.0.7
       array-includes: 3.0.3
@@ -8810,7 +8816,8 @@ packages:
       spdy: 4.0.1
       strip-ansi: 3.0.1
       supports-color: 5.5.0
-      webpack-dev-middleware: 1.12.2
+      webpack: 3.12.0_webpack@3.12.0
+      webpack-dev-middleware: 1.12.2_webpack@3.12.0
       yargs: 6.6.0
     dev: true
     engines:
@@ -8827,7 +8834,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==
-  /webpack/3.12.0:
+  /webpack/3.12.0_webpack@3.12.0:
     dependencies:
       acorn: 5.7.3
       acorn-dynamic-import: 2.0.2
@@ -8847,7 +8854,7 @@ packages:
       source-map: 0.5.7
       supports-color: 4.5.0
       tapable: 0.2.9
-      uglifyjs-webpack-plugin: 0.4.6
+      uglifyjs-webpack-plugin: 0.4.6_webpack@3.12.0
       watchpack: 1.6.0
       webpack-sources: 1.4.3
       yargs: 8.0.2
@@ -8855,6 +8862,8 @@ packages:
     engines:
       node: '>=4.3.0 <5.0.0 || >=5.10'
     hasBin: true
+    peerDependencies:
+      webpack: '*'
     resolution:
       integrity: sha512-Sw7MdIIOv/nkzPzee4o0EdvCuPmxT98+vVpIvwtcwcF1Q4SDSNp92vwcKc4REe7NItH9f1S4ra9FuQ7yuYZ8bQ==
   /websocket-driver/0.7.3:
@@ -8896,7 +8905,7 @@ packages:
       integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==
   /wide-align/1.1.3:
     dependencies:
-      string-width: 2.1.1
+      string-width: 1.0.2
     dev: true
     resolution:
       integrity: sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==
