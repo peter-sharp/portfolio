@@ -1,5 +1,6 @@
 body {
     font-size: 18px;
+    margin: 0;
 }
 
 .stack > * + * {
@@ -36,7 +37,10 @@ body {
     padding-left: 0;
 }
 
-.nav-main ul {
+.nav-main {
+    border-bottom: 0.1em solid rgba(0,0,0, 0.75);
+}
+.nav-main__items {
     display: flex;
     gap: 1em;
     padding-left: 0;
@@ -45,4 +49,14 @@ body {
 
 .nav-item--active {
     border-bottom: 0.1em solid currentColor;
+}
+
+.nav-item--active:after {
+    background-color: #fff;
+    border: 0.1em solid rgba(0,0,0, 0.75);
+    content: " ";
+    display: block;
+    height: 2em;
+    width: 2em;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
 }
