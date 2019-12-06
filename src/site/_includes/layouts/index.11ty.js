@@ -1,5 +1,6 @@
 const { html } = require('../html.js');
 const { raw } = require('../html.js');
+const cursor = require('../components/cursor.js')
 
 module.exports.render = function render({ site, title, page, content, collections }) {
 return html`
@@ -17,7 +18,7 @@ return html`
     <body>
       <header>
         <nav class="nav-main">
-          <ul class="nav-main__items" >
+          <ul class="nav-main__items">
             ${collections.page.map(
               ({ data, url: itemUrl }) => html`
                 <li
@@ -25,7 +26,11 @@ return html`
                     ? "nav-item--active"
                     : ""}"
                 >
-                  <a href="${itemUrl}">${data.title}</a>
+                  <a class="nav-item__link" href="${itemUrl}">${data.title}</a>
+                  ${cursor({
+                    parentClass: "nav-item",
+                    active: itemUrl == page.url
+                  })}
                 </li>
               `
             )}

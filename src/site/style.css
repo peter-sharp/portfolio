@@ -1,6 +1,29 @@
 body {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     margin: 0;
+}
+
+a:link {
+    color: #941;
+    text-decoration: none;
+}
+a:visited {
+    color: #321;
+}
+a:focus,
+a:hover {
+    color: #b63;
+}
+a:active {
+    color: #f94;
+}
+
+button {
+    font-size: 1.1em;
+    background: transparent;
+    padding: 0.6em;
+    border: solid 0.1em rgba(0,0,0, 0.75);
 }
 
 .stack > * + * {
@@ -43,20 +66,79 @@ body {
 .nav-main__items {
     display: flex;
     gap: 1em;
-    padding-left: 0;
+    margin: 0;
     list-style-type: none;
 }
 
-.nav-item--active {
-    border-bottom: 0.1em solid currentColor;
+.nav-item {
+    position: relative;
+    padding: 1em 0;
 }
 
-.nav-item--active:after {
-    background-color: #fff;
+.nav-item__link {
+    text-decoration: none;
+}
+.nav-item:hover,
+.nav-item:focus {
+    font-style: italic;
+}
+
+.nav-item--active .nav-item__link {
+    font-weight: bolder;
+}
+
+
+.cursor {
+    --size: 0.8em;
+    transform: scaleY(0);
+}
+
+.cursor__outer {
+    background: #fff;
+    background: linear-gradient(45deg, transparent 45%, #fff 45%);
     border: 0.1em solid rgba(0,0,0, 0.75);
-    content: " ";
-    display: block;
-    height: 2em;
-    width: 2em;
-    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0% ;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    display: flex;
+    height: 0.8em;
+    height: var(--size);
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+    width: 0.8em;
+    width: var(--size);
+}
+
+.cursor__inner {
+    background: linear-gradient(45deg, rgba(0,0,0, 0.75) 0%, rgba(0,0,0, 0.75) 50%, transparent 51% );
+    border: 0.1em solid rgba(0,0,0, 0.75);
+    height: 0.4em;
+    width: 0.4em;
+}
+
+
+.nav-item__cursor {
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    top: calc(100% - 0.4em);
+    position: absolute;
+    visibility: hidden;
+}
+
+.nav-item__link:focus ~ .nav-item__cursor,
+.nav-item:hover .nav-item__cursor,
+.nav-item--active .nav-item__cursor {
+    visibility: visible;
+    transition: transform 300ms;
+    transform: translateX(-50%) scaleY(1);
+}
+
+
+.nav-item__link:focus ~ .nav-item__cursor .cursor__inner,
+.nav-item:hover .cursor__inner {
+    visibility: hidden;
+}
+
+.nav-item--active .nav-item__link ~ .nav-item__cursor  .cursor__inner {
+    visibility: visible;
 }
