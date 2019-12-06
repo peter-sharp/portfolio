@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "make": "npx eleventy",
-    "dev": "pnpx eleventy --serve --port 8081"
+    "dev": "pnpx eleventy --serve"
   },
   "repository": {
     "type": "git",
