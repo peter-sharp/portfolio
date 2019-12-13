@@ -1,0 +1,29 @@
+---
+title: Contact
+tags: page
+layout: layouts/index.11ty.js
+---
+<div class="section">
+    <div class="section__inside stack">
+        <p>
+        Send me a message; </br>I'd love to hear from you.
+        </p>
+
+        <form name="contactForm" class="contact stack"  >
+            <div class="input-group">
+                <label for="contact_name">Name<span class="required">*</span></label>
+                <input type="text" id="contact_name" name="name" required />
+            </div>
+            <div class="input-group">
+                <label for="contact_detail">Contact details<span class="required">*</span></label>
+                <small>Some way to get back to you: email, website, mobile  etc.</small>
+                <input type="text" id="contact_detail" name="detail" required />
+            </div>
+            <div class="input-group">
+                <label for="contact_message">Message<span class="required">*</span></label>
+                <textarea name="body" id="contact_message" rows="10" required ></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</div>
