@@ -53,11 +53,32 @@ button {
 
 .gallery {
     display: flex;
-    gap: 1em;
     flex-wrap: wrap;
     flex-direction: row;
     list-style-type: none;
     padding-left: 0;
+    align-items: start;
+}
+
+.gallery__item {
+    flex: auto;
+}
+
+@supports (gap: 1em) {
+    .gallery {
+        gap: 1em;
+    }
+}
+
+@supports not (gap: 1em) {
+    .gallery {
+        margin-right: -1em;
+        margin-bottom: -1em;
+    }
+    .gallery__item {
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
 }
 
 .nav-main {
@@ -80,7 +101,7 @@ button {
 }
 .nav-item:hover,
 .nav-item:focus {
-    font-style: italic;
+    font-style: bold;
 }
 
 .nav-item--active .nav-item__link {
