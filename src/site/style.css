@@ -1,3 +1,7 @@
+:root {
+    --font-scale-1: 0.8em;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
@@ -162,4 +166,54 @@ button {
 
 .nav-item--active .nav-item__link ~ .nav-item__cursor  .cursor__inner {
     visibility: visible;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin-right: -1.5em;
+    font-size: 0.8em;
+    font-size: var(--font-scale-1);
+}
+
+.breadcrumbs__breadcrumb {
+    margin-right: 1.5em;
+}
+
+.breadcrumbs__breadcrumb + .breadcrumbs__breadcrumb::before {
+    display: inline-block;
+    content: ' ';
+    width: 0.35em;
+    height: 0.35em;
+    transform: rotate(45deg);
+    border: 0.1em solid;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    margin-right: 1.35em;
+}
+
+.user-icon-frame {
+    height: 4em;
+    overflow: hidden;
+    transform: rotate(45deg);
+    position: relative;
+    margin: 1em;
+    width: 4em;
+}
+
+.user-icon-frame::after {
+    content: ' ';
+    position: absolute;
+    border: 0.1em currentColor solid;
+    height: 5em;
+    width: 5em;
+}
+
+.user-icon-frame__image {
+    width: calc(100% + 2em);
+    transform: rotate(-45deg);
+    transform-origin: 26% 58%;
+    transform-origin: var(--image-pos, 26% 58%);
 }
