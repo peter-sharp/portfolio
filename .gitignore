@@ -3,3 +3,6 @@ npm-debug.log
 *.log
 .vscode-*
 _site
+.env
+# Local Netlify folder
+.netlify
