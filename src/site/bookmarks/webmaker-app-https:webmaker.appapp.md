@@ -1,5 +1,6 @@
 ---
-title: webmaker app
+name: webmaker app
 tags: ["web","editor","free","html","css","js"]
-date: undefined
+url: https://webmaker.app/app/
+date: 2020-01-28T09:24:43.066Z
 ---
