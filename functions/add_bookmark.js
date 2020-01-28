@@ -39,6 +39,7 @@ exports.handler = async function postByEmail(event, context) {
             url,
             name,
             tags,
+            date,
             base_tree: branch,
         })
         commit = await commitTheFiles(octokit, {
@@ -97,8 +98,9 @@ exports.handler = async function postByEmail(event, context) {
         
        
         const content = `---
-title: ${name}
+name: ${name}
 tags: ${JSON.stringify(tags)}
+url: ${url}
 date: ${date}
 ---
 `;
