@@ -119,14 +119,14 @@ date: ${date}
         return res.data.sha
     }
 
-    function commitTheFiles(octokit, { subject, tree, branch, date }) {
+    function commitTheFiles(octokit, { name, tree, branch, date }) {
         // const author = getContactDetails()
         // author.date = date
         // console.info(author)
         return octokit.git.createCommit({
             owner,
             repo,
-            message: `New post: ${subject}`,
+            message: `New bookmark: ${name} ${date}`,
             tree,
             parents: [branch],
             // author,
