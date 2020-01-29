@@ -2,10 +2,18 @@
     --font-scale-1: 0.8em;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     margin: 0;
+}
+
+main {
+    flex: 0 1 auto;
 }
 
 input {
@@ -38,6 +46,20 @@ button {
     background: transparent;
     padding: 0.6em;
     border: solid 0.1em rgba(0,0,0, 0.75);
+}
+
+
+.sticky-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-footer__content {
+    flex: 1 0 auto;
+}
+
+.sticky-footer__footer {
+    flex-shrink: 0;
 }
 
 .stack > * + * {

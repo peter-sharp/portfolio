@@ -15,7 +15,7 @@ return html`
       <base href="/" />
       <link rel="stylesheet" href="/style.css" />
     </head>
-    <body>
+    <body class="sticky-footer">
       <header>
         <nav class="nav-main">
           <ul class="nav-main__items">
@@ -37,10 +37,10 @@ return html`
           </ul>
         </nav>
       </header>
-      <main>
+      <main class="sticky-footer__content">
         ${raw(content)}
       </main>
-      <footer class="section">
+      <footer class="section sticky-footer__footer">
         <div class="section__inside">
           <a href="/contact">Send me a telegram</a>
         </div>
