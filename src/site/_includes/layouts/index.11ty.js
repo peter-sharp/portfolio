@@ -19,7 +19,7 @@ return html`
       <header>
         <nav class="nav-main">
           <ul class="nav-main__items">
-            ${collections.page.map(
+            ${reverse(collections.page).map(
               ({ data, url: itemUrl }) => html`
                 <li
                   class="nav-item ${itemUrl == page.url
@@ -48,4 +48,9 @@ return html`
     </body>
   </html>
 `.toString();
+}
+
+function reverse(arr) {
+    let rev = [...arr].reverse();
+    return rev;
 }

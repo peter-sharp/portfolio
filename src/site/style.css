@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+input {
+    box-sizing: border-box;
+}
+
 a:link {
     color: #941;
     text-decoration: none;
@@ -23,6 +27,12 @@ a:active {
     color: #f94;
 }
 
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
 button {
     font-size: 1.1em;
     background: transparent;
@@ -31,7 +41,15 @@ button {
 }
 
 .stack > * + * {
+    display: block;
     margin-top: 1em;
+}
+
+.stack--gap-medium > * + * {
+    margin-top: 2em;
+}
+.stack--gap-large > * + * {
+    margin-top: 4em;
 }
 
 .image--responsive {
@@ -85,19 +103,25 @@ button {
     }
 }
 
+/* borrowed sausage links idea from https://uglyduck.ca/hamburger-menu-alternative/ */
 .nav-main {
     border-bottom: 0.1em solid rgba(0,0,0, 0.75);
 }
 .nav-main__items {
     display: flex;
-    gap: 1em;
-    margin: 0;
+    flex-wrap: nowrap;
     list-style-type: none;
+    margin: 0;
+    margin-right: -1em;
+    padding: 0 1em;
+    position: relative;
 }
 
 .nav-item {
+    margin-right: 1em;
     position: relative;
     padding: 1em 0;
+    white-space: nowrap;
 }
 
 .nav-item__link {
@@ -129,7 +153,7 @@ button {
     height: var(--size);
     justify-content: center;
     align-items: center;
-    transform: rotate(-45deg);
+    transform: rotate(-46deg);
     width: 0.8em;
     width: var(--size);
 }
