@@ -5,7 +5,7 @@
   "main": "js/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "make": "pnpx run-p make:**",
+    "make": "npx run-p make:**",
     "make:eleventy": "npx eleventy",
     "make:lambda": "netlify functions:build ",
     "dev": "pnpx run-p dev:**",
