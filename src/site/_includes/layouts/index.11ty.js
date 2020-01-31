@@ -15,11 +15,11 @@ return html`
       <base href="/" />
       <link rel="stylesheet" href="/style.css" />
     </head>
-    <body>
+    <body class="sticky-footer">
       <header>
         <nav class="nav-main">
           <ul class="nav-main__items">
-            ${collections.page.map(
+            ${reverse(collections.page).map(
               ({ data, url: itemUrl }) => html`
                 <li
                   class="nav-item ${itemUrl == page.url
@@ -37,10 +37,10 @@ return html`
           </ul>
         </nav>
       </header>
-      <main>
+      <main class="sticky-footer__content">
         ${raw(content)}
       </main>
-      <footer class="section">
+      <footer class="section sticky-footer__footer">
         <div class="section__inside">
           <a href="/contact">Send me a telegram</a>
         </div>
@@ -48,4 +48,9 @@ return html`
     </body>
   </html>
 `.toString();
+}
+
+function reverse(arr) {
+    let rev = [...arr].reverse();
+    return rev;
 }

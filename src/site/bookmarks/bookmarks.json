@@ -1,0 +1,4 @@
+{
+    "tags": ["bookmark"],
+    "layout": "layouts/post.11ty.js"
+}

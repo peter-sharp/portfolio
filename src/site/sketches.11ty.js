@@ -2,7 +2,7 @@ const { html } = require('./_includes/html.js')
 const gallery = require('./_includes/components/gallery.js')
 
 module.exports.data = {
-    title: 'Sketchbook',
+    title: 'Sketches',
     tags: 'page',
     layout: 'layouts/index.11ty.js'
 }
