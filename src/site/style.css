@@ -206,7 +206,7 @@ button {
 .user-icon-frame::after {
     content: ' ';
     position: absolute;
-    border: 0.1em currentColor solid;
+    border: 0.1em solid currentColor;
     height: 5em;
     width: 5em;
 }
