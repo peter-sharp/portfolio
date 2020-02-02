@@ -1,0 +1,35 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-worker_idle01 {
+    width: 277px;
+    height: 400px;
+    background-position: -5px -5px;
+}
+
+.sprite-worker_working01 {
+    width: 277px;
+    height: 400px;
+    background-position: -292px -5px;
+}
+
+.sprite-worker_working02 {
+    width: 277px;
+    height: 400px;
+    background-position: -579px -5px;
+}
+
+.sprite-worker_working03 {
+    width: 277px;
+    height: 400px;
+    background-position: -5px -415px;
+}
+
+.sprite-worker_working04 {
+    width: 277px;
+    height: 400px;
+    background-position: -292px -415px;
+}
