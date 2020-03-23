@@ -104,8 +104,12 @@ button {
     align-items: start;
 }
 
-.gallery__item {
+.gallery__card {
     flex: auto;
+}
+
+.card__image {
+    width: 100%;
 }
 
 @supports (gap: 1em) {
