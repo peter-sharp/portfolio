@@ -19,7 +19,7 @@ return html`
       <header>
         <nav class="nav-main">
           <ul class="nav-main__items">
-            ${reverse(collections.page).map(
+            ${reverse(collections.mainMenu).map(
               ({ data, url: itemUrl }) => html`
                 <li
                   class="nav-item ${itemUrl == page.url

@@ -3,6 +3,7 @@ const gallery = require('./_includes/components/gallery.js')
 
 module.exports.data = {
     title: 'Sketches',
+    menuIndex: 1,
     tags: 'page',
     layout: 'layouts/index.11ty.js'
 }
