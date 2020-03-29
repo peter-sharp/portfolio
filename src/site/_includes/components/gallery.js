@@ -5,7 +5,7 @@ module.exports = function gallery(items) {
                   
                   ${items.map(({ data, url }) => html`
                   <li class="gallery__card card" id="${data.id}">
-                      <a href="${url}" >
+                      <a href="${url}" class="stack stack--gap-small">
                           ${data.mediaPaths ?
                             html`<img class="card__image" src="/uploads/${data.mediaPaths.small || data.mediaPaths.original}" alt="${data.title}"/>` :
                       html`<div class="card__image-placeholder"></div>`}

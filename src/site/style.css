@@ -69,6 +69,10 @@ button {
     margin-top: 1em;
 }
 
+.stack--gap-small > * + * {
+    margin-top: 0.6em;
+}
+
 .stack--gap-medium > * + * {
     margin-top: 2em;
 }
