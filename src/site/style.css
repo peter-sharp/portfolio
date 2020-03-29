@@ -133,6 +133,14 @@ button {
     width: 100%;
 }
 
+.card__image-clip {
+    max-height: 18em;
+    overflow-y: hidden;
+    /* HACK fixes flexbox accounting for clipped contents */
+    display: inline-block;
+    width: 100%;
+}
+
 .card__title {
     color: #15181e;
     color: var(--color-grey-900);
