@@ -2,6 +2,10 @@
     --font-scale-1: 0.8em;
     --color-primary: #F76B1C;
     --color-accent2: #FAD961;
+    --color-grey-900: #4e7288;
+    --color-grey-850: #5F7F93;
+    --color-grey-100: #d4e5f7;
+    --color-grey-0: #fff;
 }
 
 html, body {
@@ -12,6 +16,10 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     margin: 0;
+    background-color: #ced9e4;
+    background-color: var(--color-grey-100);
+    color: #4e7288;
+    color: var(--color-grey-900);
 }
 
 main {
@@ -22,12 +30,12 @@ input {
     box-sizing: border-box;
 }
 
-a:link {
-    color: #941;
+:link {
+    color: #F76B1C;
     text-decoration: none;
 }
-a:visited {
-    color: #321;
+:visited {
+    color: #b63;
 }
 a:focus,
 a:hover {
@@ -47,7 +55,10 @@ button {
     font-size: 1.1em;
     background: transparent;
     padding: 0.6em;
-    border: solid 0.1em rgba(0,0,0, 0.75);
+    border: solid 0.1em #4e7288;
+    border-color: var(--color-grey-900);
+    color: #4e7288;
+    color: var(--color-grey-900);
 }
 
 
@@ -113,7 +124,8 @@ button {
 .gallery__card {
     flex: auto;
     max-width: 18em;
-    border: 0.1em solid rgba(0,0,0, 0.1);
+	border-bottom: 0.1em solid #4e7288;
+	border-bottom-color: var(--color-grey-900);
 }
 
 .card__image {
@@ -121,28 +133,33 @@ button {
 }
 
 .card__title {
+    color: #15181e;
+    color: var(--color-grey-900);
     padding: 0 0.4em 0.2em 0.4em;
 }
-
 /* TODO revise revise naming */
 .card__image-placeholder {
     width: 100%;
     max-width: 18em;
     height: 13em;
-    background-color: #FAD961;
-    background-color: var(--color-accent2);
+    background-color: #4e7288;
+    background-color: var(--color-grey-900);
     background-image:
-        linear-gradient(45deg, #ccc 25%, transparent 25%),
-        linear-gradient(-45deg, #ccc 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #ccc 75%),
-        linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    linear-gradient(45deg, #5F7F93 25%, transparent 25%),
+    linear-gradient(-45deg, #5F7F93 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #5F7F93 75%),
+    linear-gradient(-45deg, transparent 75%, #5F7F93 75%);
     background-image:
-        linear-gradient(45deg, var(--color-primary) 25%, transparent 25%),
-        linear-gradient(-45deg, var(--color-primary) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, var(--color-primary) 75%),
-        linear-gradient(-45deg, transparent 75%, var(--color-primary) 75%);
-    background-size:2em 2em;
-    background-position: 0 0, 0 1em, 0.99em -1em, -1em 0px;
+    linear-gradient(45deg, var(--color-grey-850) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--color-grey-850) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--color-grey-850) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--color-grey-850) 75%);
+    background-size:20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+.card__image,
+.card__image-placeholder {
+    border-bottom: solid 0.1em var(--color-grey-900);
 }
 
 @supports (gap: 1em) {
@@ -164,7 +181,8 @@ button {
 
 /* borrowed sausage links idea from https://uglyduck.ca/hamburger-menu-alternative/ */
 .nav-main {
-    border-bottom: 0.1em solid rgba(0,0,0, 0.75);
+    border-bottom: 0.1em solid #15181e;
+    border-bottom-color: var(--color-grey-900);
 }
 .nav-main__items {
     display: flex;
@@ -185,10 +203,16 @@ button {
 
 .nav-item__link {
     text-decoration: none;
+    color: #15181e;
+    color: var(--color-grey-900);
 }
 .nav-item:hover,
 .nav-item:focus {
     font-style: bold;
+}
+.nav-item__link:hover,
+.nav-item__link:focus {
+
 }
 
 .nav-item--active .nav-item__link {
@@ -202,9 +226,11 @@ button {
 }
 
 .cursor__outer {
-    background: #fff;
-    background: linear-gradient(45deg, transparent 45%, #fff 45%);
-    border: 0.1em solid rgba(0,0,0, 0.75);
+    background: #ced9e4;
+    background: linear-gradient(45deg, transparent 45%, #ced9e4 45%);
+    background: linear-gradient(45deg, transparent 45%, var(--color-grey-100) 45%);
+    border: 0.1em solid #15181e;
+    border-color: var(--color-grey-900);
     border-left-color: transparent;
     border-bottom-color: transparent;
     display: flex;
@@ -218,8 +244,10 @@ button {
 }
 
 .cursor__inner {
-    background: linear-gradient(45deg, rgba(0,0,0, 0.75) 0%, rgba(0,0,0, 0.75) 50%, transparent 51% );
-    border: 0.1em solid rgba(0,0,0, 0.75);
+    background: linear-gradient(45deg, #15181e 0%, #15181e 50%, transparent 51% );
+    background: linear-gradient(45deg, var(--color-grey-900) 0%, var(--color-grey-900) 50%, transparent 51% );
+    border: 0.1em solid #15181e;
+    border-color: var(--color-grey-900);
     height: 0.4em;
     width: 0.4em;
 }
