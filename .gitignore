@@ -6,3 +6,6 @@ _site
 .env
 # Local Netlify folder
 .netlify
+
+# Too large
+src/site/uploads/Offline test 1.avi
