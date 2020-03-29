@@ -11,7 +11,7 @@ module.exports.data = {
 module.exports.render = function render({ collections }) {
     return html`<div>
         <div class="section">
-            <div class="section__inside">${gallery(collections.gallery)}</div>
+            ${gallery(collections.gallery)}
         </div>
         <article class="h-card section">
             <figure class="section__inside stack stack--gap-medium">
