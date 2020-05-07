@@ -9,5 +9,6 @@ tags:
   - traditional
 mediaPaths:
   original: Cute but beefy.jpg
+  thumbnail: sizes/thumbnail/Cute but beefy.jpg
 ---
 SKetch for a drawing competition

@@ -10,5 +10,6 @@ tags:
   - sketch
 mediaPaths:
   original: Sea in turmoil.png
+  thumbnail: sizes/thumbnail/Sea in turmoil.png
 ---
 For a kid's presentation about Jesus calming the storm

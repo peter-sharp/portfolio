@@ -10,5 +10,6 @@ tags:
   - colour
 mediaPaths:
   original: mrsteinberg-sheet.jpg
+  thumbnail: sizes/thumbnail/mrsteinberg-sheet.jpg
 ---
 Character sheet for an animation project

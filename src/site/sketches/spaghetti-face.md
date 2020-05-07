@@ -9,5 +9,6 @@ tags:
   - sketch
 mediaPaths:
   original: Spaghetti_face.jpg
+  thumbnail: sizes/thumbnail/Spaghetti_face.jpg
 ---
 Created during photography class. Details added using black pepper.

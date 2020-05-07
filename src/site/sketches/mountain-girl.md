@@ -9,4 +9,5 @@ tags:
   - colour
 mediaPaths:
   original: Mountain-girl.png
+  thumbnail: sizes/thumbnail/Mountain-girl.png
 ---

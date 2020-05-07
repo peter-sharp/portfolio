@@ -10,5 +10,6 @@ tags:
   - sketch
 mediaPaths:
   original: pixelme.png
+  thumbnail: sizes/thumbnail/pixelme.png
 ---
 Pixel art self portrait.

@@ -13,8 +13,6 @@ tags:
   - gallery
 mediaPaths:
   original: me-in-the-box.png
-  large: sizes/me-in-the-box-large.png
-  medium: sizes/me-in-the-box-medium.png
-  small: sizes/me-in-the-box-small.png
+  thumbnail: sizes/thumbnail/me-in-the-box.png
 ---
 My 21st birthday invitation

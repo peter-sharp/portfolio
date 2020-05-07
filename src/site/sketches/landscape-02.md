@@ -10,4 +10,5 @@ tags:
   - vector
 mediaPaths:
   original: landscape 2.svg
+  thumbnail: sizes/thumbnail/landscape 2.svg
 ---

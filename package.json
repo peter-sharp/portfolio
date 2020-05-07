@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "make": "npx run-p make:**",
+    "make:images": "npm run images",
     "make:eleventy": "npx eleventy",
     "make:lambda": "netlify functions:build --src=functions/",
+    "images": "npx run-p images:**",
+    "images:thumbnail": "sharp -i \"./src/site/uploads/**/*.{jpg,png}\" -o \"./_site/uploads/sizes/thumbnail\" resize 324 --fit=inside",
     "dev": "pnpx run-p dev:**",
     "dev:lambda": "pnpx netlify dev"
   },
@@ -28,7 +31,6 @@
     "@octokit/rest": "^16.38.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
     "dotenv": "^8.2.0",
     "front-matter": "^2.3.0",
     "js-yaml": "^3.13.1",
@@ -36,6 +38,8 @@
     "netlify-cli": "^2.30.0",
     "netlify-redirector": "^0.1.0",
     "npm-run-all": "^4.1.5",
+    "sharp": "^0.25.2",
+    "sharp-cli": "^1.13.1",
     "slugify": "^1.3.6",
     "typescript": "^3.7.2"
   },

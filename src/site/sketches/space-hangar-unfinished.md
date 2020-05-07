@@ -9,4 +9,5 @@ tags:
   - colour
 mediaPaths:
   original: space-hangar-unfinished.jpg
+  thumbnail: sizes/thumbnail/space-hangar-unfinished.jpg
 ---

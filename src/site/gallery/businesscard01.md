@@ -13,8 +13,6 @@ tags:
   - gallery
 mediaPaths:
   original: avon-beauty.png
-  large: sizes/avon-beauty-large.png
-  medium: sizes/avon-beauty-medium.png
-  small: sizes/avon-beauty-small.png
+  thumbnail: sizes/thumbnail/avon-beauty.png
 ---
 A business card for beauty products

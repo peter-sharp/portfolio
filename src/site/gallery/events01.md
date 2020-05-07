@@ -13,8 +13,6 @@ tags:
   - gallery
 mediaPaths:
   original: 50th-invite.png
-  large: sizes/50th-invite-large.png
-  medium: sizes/50th-invite-medium.png
-  small: sizes/50th-invite-small.png
+  thumbnail: sizes/thumbnail/50th-invite.png
 ---
 My father's 50th birthday invitation

@@ -10,5 +10,6 @@ tags:
   - sketch
 mediaPaths:
   original: Calmed by Jesus.png
+  thumbnail: sizes/thumbnail/Calmed by Jesus.png
 ---
 For a kid's presentation about Jesus calming the storm

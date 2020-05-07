@@ -9,4 +9,5 @@ tags:
   - colour
 mediaPaths:
   original: imaginary-lakeside_201406021546.jpg
+  thumbnail: sizes/thumbnail/imaginary-lakeside_201406021546.jpg
 ---

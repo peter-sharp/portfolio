@@ -10,4 +10,5 @@ tags:
   - colour
 mediaPaths:
   original: mini_studies-illustrations04.jpg
+  thumbnail: sizes/thumbnail/mini_studies-illustrations04.jpg
 ---

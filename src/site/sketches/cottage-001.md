@@ -8,5 +8,6 @@ tags:
   - sketch
 mediaPaths:
   original: Cottage thumb_001.jpg
+  thumbnail: sizes/thumbnail/Cottage thumb_001.jpg
 ---
 Unfinished painting

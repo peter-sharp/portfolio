@@ -14,8 +14,6 @@ tags:
   - gallery
 mediaPaths:
   original: merchant-house.jpg
-  large: sizes/merchant-house-large.jpg
-  medium: sizes/merchant-house-medium.jpg
-  small: sizes/merchant-house-small.jpg
+  thumbnail: sizes/thumbnail/merchant-house.jpg
 ---
 A building in an oriental steampunk world.

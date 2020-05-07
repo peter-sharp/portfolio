@@ -10,5 +10,6 @@ tags:
   - penguin
 mediaPaths:
   original: Tux.jpg
+  thumbnail: sizes/thumbnail/Tux.jpg
 ---
 Tux (linux mascot) fan-art

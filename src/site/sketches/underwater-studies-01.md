@@ -9,4 +9,5 @@ tags:
   - colour
 mediaPaths:
   original: Underwater studies.jpg
+  thumbnail: sizes/thumbnail/Underwater studies.jpg
 ---

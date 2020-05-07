@@ -11,4 +11,5 @@ tags:
   - gallery
 mediaPaths:
   original: English grammar lesson.png
+  thumbnail: sizes/thumbnail/English grammar lesson.png
 ---
