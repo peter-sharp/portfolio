@@ -14,7 +14,9 @@ module.exports.render = function render({ content, mediaPaths, title, page }) {
         ${breadcrumbs([title, getCollectionLink(page.filePathStem)])}
          ${
         mediaPaths ? html`<figure>
-           <img class="image--responsive" src="/uploads/${mediaPaths.original}">
+            <a href="/uploads/${mediaPaths.original}">
+              <img class="image--responsive" src="/uploads/${mediaPaths.original}">
+            </a>
             <figcaption>${raw(content)}</figcaption>
         </figure>
          ` : html`${raw(content)}</div>`
