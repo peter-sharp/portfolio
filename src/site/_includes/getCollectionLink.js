@@ -1,9 +1,9 @@
 
 module.exports = function getCollectionLink(uri) {
     const [, collection,] = uri.split('/')
-    const title = collection;
+    const title = "gallery" == collection ? "home" : collection;
     return {
-        url: `/${collection}`,
+        url: `/${'gallery' == collection ? '' : collection}`,
         title
     }
 }
