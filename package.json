@@ -9,7 +9,11 @@
     "make:images": "npm run images",
     "make:eleventy": "npx eleventy",
     "make:lambda": "netlify functions:build --src=functions/",
-    "images": "npx run-p images:**",
+    "image-folders:thumbnail": "shx mkdir -p ./_site/uploads/sizes/thumbnail",
+    "image-folders:small": "shx mkdir -p ./_site/uploads/sizes/small",
+    "image-folders:medium": "shx mkdir -p ./_site/uploads/sizes/medium",
+    "image-folders:large": "shx mkdir -p ./_site/uploads/sizes/large",
+    "images": "npx run-s image-folders:** images:**",
     "images:thumbnail": "sharp -i \"./src/site/uploads/**/*.{jpg,png}\" -o \"./_site/uploads/sizes/thumbnail\" resize 324 --fit=inside",
     "dev": "pnpx run-p dev:**",
     "dev:lambda": "pnpx netlify dev"
@@ -40,6 +44,7 @@
     "npm-run-all": "^4.1.5",
     "sharp": "^0.25.2",
     "sharp-cli": "^1.13.1",
+    "shx": "^0.3.2",
     "slugify": "^1.3.6",
     "typescript": "^3.7.2"
   },
