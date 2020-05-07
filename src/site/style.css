@@ -61,6 +61,9 @@ button {
     color: var(--color-grey-900);
 }
 
+figure {
+    margin: 0;
+}
 
 .sticky-footer {
     display: flex;
