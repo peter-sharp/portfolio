@@ -127,7 +127,8 @@ figure {
 
 .gallery__card {
     flex: 1 0 18em;
-    max-width: 18em;
+    width: 18em;
+    max-width: 100%;
 	border-bottom: 0.1em solid #4e7288;
 	border-bottom-color: var(--color-grey-900);
 }
@@ -174,22 +175,20 @@ figure {
     border-bottom: solid 0.1em var(--color-grey-900);
 }
 
-@supports (gap: 1em) {
-    .gallery {
-        gap: 1em;
-    }
+
+.gallery {
+    --gap: 3em;
+    margin-left: -3em;
+    margin-left: calc(var(--gap) * -1);
+    overflow: hidden;
+}
+.gallery__card {
+    margin-left: 3em;
+    margin-left: var(--gap);
+    margin-bottom: 3em;
+    margin-bottom: var(--gap);
 }
 
-@supports not (gap: 1em) {
-    .gallery {
-        margin-right: -1em;
-        margin-bottom: -1em;
-    }
-    .gallery__item {
-        margin-right: 1em;
-        margin-bottom: 1em;
-    }
-}
 
 /* borrowed sausage links idea from https://uglyduck.ca/hamburger-menu-alternative/ */
 .nav-main {
