@@ -8,6 +8,8 @@ devDependencies:
   '@octokit/rest': 16.38.3
   babel-core: 6.26.3
   babel-loader: 7.1.5_babel-core@6.26.3
+  date-fns: 2.15.0
+  date-fns-tz: 1.0.10_date-fns@2.15.0
   dotenv: 8.2.0
   front-matter: 2.3.0
   js-yaml: 3.13.1
@@ -2317,6 +2319,20 @@ packages:
     dev: false
     resolution:
       integrity: sha512-Vy4dx7gquTeMcQR/hDkYLGUnwVil6vk4FOOct+djUnHOUWt+zJPJAaRIXaAFkPXtJjvlY7o3rfRu0/3hpnwoUA==
+  /date-fns-tz/1.0.10_date-fns@2.15.0:
+    dependencies:
+      date-fns: 2.15.0
+    dev: true
+    peerDependencies:
+      date-fns: '>=2.0.0-alpha.13'
+    resolution:
+      integrity: sha512-cHQAz0/9uDABaUNDM80Mj1FL4ODlxs1xEY4b0DQuAooO2UdNKvDkNbV8ogLnxLbv02Ru1HXFcot0pVvDRBgptg==
+  /date-fns/2.15.0:
+    dev: true
+    engines:
+      node: '>=0.11'
+    resolution:
+      integrity: sha512-ZCPzAMJZn3rNUvvQIMlXhDr4A+Ar07eLeGsGREoWU19a3Pqf5oYa+ccd+B3F6XVtQY6HANMFdOQ8A+ipFnvJdQ==
   /date-time/0.1.1:
     dev: true
     engines:
@@ -9671,6 +9687,8 @@ specifiers:
   babel-core: ^6.26.0
   babel-loader: ^7.1.2
   choo: ^6.5.1
+  date-fns: ^2.15.0
+  date-fns-tz: ^1.0.10
   dotenv: ^8.2.0
   front-matter: ^2.3.0
   js-yaml: ^3.13.1

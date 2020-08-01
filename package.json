@@ -35,6 +35,8 @@
     "@octokit/rest": "^16.38.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "date-fns": "^2.15.0",
+    "date-fns-tz": "^1.0.10",
     "dotenv": "^8.2.0",
     "front-matter": "^2.3.0",
     "js-yaml": "^3.13.1",
