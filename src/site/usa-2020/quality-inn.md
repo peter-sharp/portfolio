@@ -1,5 +1,5 @@
 ---
-date: 2020-07-31
+date: 2020-07-31 00:00:00-07
 ---
 Left the Budget Inn and took the trailer to wallmart. Sorted luggage inside container. Bought more supplies for the trip from the Dollar Tree.
 

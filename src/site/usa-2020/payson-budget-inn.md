@@ -1,5 +1,5 @@
 ---
-date: 2020-07-29
+date: 2020-07-29 00:00:00-07
 ---
 Next morning Grace and her Mom had bought up the complimentary continental breakfast bag. Just had a bunch of breakfast bars. I got a breakfast burrito of the heat and eat variety. Grace's brothers soon arrived in a chevrolet tahoe and a rental and headed towards Payson. 
 
