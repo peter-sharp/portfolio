@@ -4,7 +4,7 @@ const format = require('date-fns/format');
 
 module.exports = function timeline(items) {
     return html`<ul class="timeline stack">
-        ${items.map(
+        ${items.filter(x => !x.data.draft).map(
             ({ data, date, templateContent }) => html` <li
                 class="timeline__card card"
                 id="${data.id}"
