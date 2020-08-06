@@ -17,6 +17,7 @@ devDependencies:
   netlify-cli: 2.30.0
   netlify-redirector: 0.1.0
   npm-run-all: 4.1.5
+  outdent: 0.7.1
   sharp: 0.25.2
   sharp-cli: 1.13.1
   shx: 0.3.2
@@ -3619,6 +3620,8 @@ packages:
     engines:
       node: '>=4.0'
     optional: true
+    os:
+      - darwin
     requiresBuild: true
     resolution:
       integrity: sha512-oeyj2H3EjjonWcFjD5NvZNE9Rqe4UW+nQBU2HNeKw0koVLEFIhtyETyAakeAM3de7Z/SW5kcA+fZUait9EApnw==
@@ -3627,6 +3630,8 @@ packages:
     engines:
       node: ^8.16.0 || ^10.6.0 || >=11.0.0
     optional: true
+    os:
+      - darwin
     resolution:
       integrity: sha512-R4wDiBwZ0KzpgOWetKDug1FZcYhqYnUYKtfZYt4mD5SBz76q0KR4Q9o7GIPamsVPGmW3EYPPJ0dOOjvx32ldZA==
   /function-bind/1.1.1:
@@ -6536,6 +6541,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0CWcCECdMVc2Rw3U5w9ZjqX6ga6ubk1xDVKxtBQPK7wis/0F2r9T6k4ydGYhecl7YUBxBVxhL5oisPsNxAPe2g==
+  /outdent/0.7.1:
+    dev: true
+    resolution:
+      integrity: sha512-VjIzdUHunL74DdhcwMDt5FhNDQ8NYmTkuW0B+usIV2afS9aWT/1c9z1TsnFW349TP3nxmYeUl7Z++XpJRByvgg==
   /p-all/2.1.0:
     dependencies:
       p-map: 2.1.0
@@ -9697,6 +9706,7 @@ specifiers:
   netlify-cli: ^2.30.0
   netlify-redirector: ^0.1.0
   npm-run-all: ^4.1.5
+  outdent: 0.7.1
   sharp: ^0.25.2
   sharp-cli: ^1.13.1
   shx: ^0.3.2

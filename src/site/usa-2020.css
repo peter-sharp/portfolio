@@ -6,9 +6,23 @@ body,
 html {
     margin: 0;
 }
+:link {
+    color: #3c3b6e;
+}
+:visited {
+    color: #6470a7;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
 
 .stack > * + * {
     margin-top: 0.6in;
+}
+
+.stack--gap-small > * + * {
+    margin-top: 0.1in;
 }
 
 .section {
@@ -41,6 +55,54 @@ html {
 .timeline__card {
     border-left: solid 0.1in #333;
     padding-left: 0.25in;
+}
+
+.gallery {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.gallery__card {
+    flex: 1 0 2in;
+    width: 2in;
+    max-width: 100%;
+}
+
+.card__image {
+    width: 100%;
+}
+
+.card__image-clip {
+    max-height: 2in;
+    overflow-y: hidden;
+    /* HACK fixes flexbox accounting for clipped contents */
+    display: inline-block;
+    width: 100%;
+}
+
+.card__title {
+    color: #15181e;
+    color: var(--color-grey-900);
+}
+
+
+
+.gallery {
+    --gap: 0.8in;
+    margin-left: -0.8in;
+    margin-left: calc(var(--gap) * -1);
+    overflow: hidden;
+}
+.gallery__card {
+    margin-left: 0.8in;
+    margin-left: var(--gap);
+    margin-bottom: 0.8in;
+    margin-bottom: var(--gap);
 }
 
 /*! USA.css | From https://bennettfeely.com */
