@@ -1,2 +1,2 @@
 # peter-sharp-portfolio
-This is my portfolio / blog
+This is my portfolio / blog warts and all.
