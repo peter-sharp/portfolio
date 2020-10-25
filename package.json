@@ -4,7 +4,7 @@
   "description": "My portfolio using gituhb as a backend",
   "main": "js/bundle.js",
   "engines": {
-    "node": ">=12.18.3"
+    "node": ">=10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
