@@ -1,11 +1,11 @@
 :root {
-    --font-scale-1: 0.8em;
-    --color-primary: #F76B1C;
-    --color-accent2: #FAD961;
-    --color-grey-900: #4e7288;
-    --color-grey-850: #5F7F93;
-    --color-grey-100: #d4e5f7;
-    --color-grey-0: #fff;
+  --font-scale-1: 0.8em;
+  --color-primary: #F76B1C;
+  --color-accent2: #FAD961;
+  --color-grey-900: #4f483c;
+  --color-grey-850: #bcb893;
+  --color-grey-100: #faeab5;
+  --color-grey-0: #fff;
 }
 
 html, body {
@@ -78,19 +78,19 @@ figure {
     flex-shrink: 0;
 }
 
-.stack > * + * {
+.stack > *:not(script):not(style) + * {
     display: block;
     margin-top: 1em;
 }
 
-.stack--gap-small > * + * {
+.stack--gap-small > *:not(script):not(style) + * {
     margin-top: 0.4em;
 }
 
-.stack--gap-medium > * + * {
+.stack--gap-medium > *:not(script):not(style) + * {
     margin-top: 2em;
 }
-.stack--gap-large > * + * {
+.stack--gap-large > *:not(script):not(style) + * {
     margin-top: 4em;
 }
 
@@ -189,26 +189,36 @@ figure {
     margin-bottom: var(--gap);
 }
 
+.site-header {
+  border-bottom: 0.1em solid #15181e;
+  border-bottom-color: var(--color-grey-900);
+  display: flex;
+  justify-content: space-between;
+}
 
 /* borrowed sausage links idea from https://uglyduck.ca/hamburger-menu-alternative/ */
-.nav-main {
-    border-bottom: 0.1em solid #15181e;
-    border-bottom-color: var(--color-grey-900);
-}
+
+
+
 .nav-main__items {
-    display: flex;
+    display: inline-block;
+    display: inline-flex;
     flex-wrap: nowrap;
     list-style-type: none;
     margin: 0;
     padding: 0 1em;
     position: relative;
+    justify-content: center;
 }
 
 .nav-item {
-    margin-right: 1em;
     position: relative;
     padding: 1em 0;
     white-space: nowrap;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 1em;
 }
 
 .nav-item__link {
@@ -316,6 +326,7 @@ figure {
 }
 
 .user-icon-frame {
+    border: double 0.4em;
     height: 4em;
     overflow: hidden;
     transform: rotate(45deg);
@@ -337,4 +348,26 @@ figure {
     transform: rotate(-45deg);
     transform-origin: 26% 58%;
     transform-origin: var(--image-pos, 26% 58%);
+}
+
+.site-title {
+  font-weight: lighter;
+  padding: 0.1em 0.6em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.site-title > * {
+  display: inline-block;
+}
+
+.site-title > *:not(:last-child) {
+  margin-right: 0.3em;
+}
+
+.site-logo {
+	width: 0.8em;
+	height: auto;
+	vertical-align: baseline;
 }

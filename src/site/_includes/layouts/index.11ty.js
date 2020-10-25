@@ -19,8 +19,11 @@ return html`
             <base href="/" />
             <link rel="stylesheet" href="/style.css" />
         </head>
-        <body class="sticky-footer">
-            <header>
+        <body class="sticky-footer stack stack--gap-large">
+            <header class="site-header">
+                <h1 class="site-title">
+                  ${raw(this.svgContents('/src/site/logo.svg', 'site-logo'))}<span class="site-title__text">Peter Sharp</span>
+                </h1>
                 <nav class="nav-main">
                     <ul class="nav-main__items">
                         ${reverse(collections.mainMenu).map(
@@ -47,7 +50,7 @@ return html`
                 ${raw(content)}
             </main>
             <footer class="section sticky-footer__footer">
-                <div class="section__inside">
+                <div class="">
                     <a href="/contact">Send me a telegram</a>
                 </div>
             </footer>

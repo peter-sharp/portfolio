@@ -14,7 +14,7 @@ module.exports.render = function render({ collections }) {
             ${gallery(collections.gallery)}
         </div>
         <article class="h-card section">
-            <figure class="section__inside stack stack--gap-medium">
+            <figure class="stack stack--gap-medium">
                 <div class="user-icon-frame">
                     <img class="u-logo image--responsive user-icon-frame__image" src="/uploads/peter-like-a-sir.png"/>
                 </div>
