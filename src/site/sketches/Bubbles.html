@@ -10,170 +10,163 @@ tags:
 ---
 
 <style id="webmakerstyle">
-body {
-  background: #4dd124;
-  background: linear-gradient(0deg, #4dd124 0%, #1bd964 20%, #e0e0f7 29%, #00acff 100%);
-  height: 100vh;
-  overflow: hidden; }
+  .game-canvas {
+    background: #4dd124;
+    background: linear-gradient(0deg, #4dd124 0%, #1bd964 20%, #e0e0f7 29%, #00acff 100%);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
 
-.bubble {
-  --size: 3rem;
-  --size-highlight: calc(var(--size)/6);
-  display: block;
-  height: var(--size);
-  width: var(--size);
-  position: absolute;
-  top: 0;
-  left: 0; }
-  .bubble__display {
-    pointer-events: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    border: solid 1px rgba(255, 255, 255, 0.4);
-    transition: all 200ms;
-    height: 100%;
-    width: 100%; }
-    .bubble__display:after {
-      content: ' ';
+  .bubble {
+      --size: 3rem;
+      --size-highlight: calc(var(--size)/6);
       display: block;
-      background-color: #fff;
-      height: var(--size-highlight);
-      width: var(--size-highlight);
-      border-radius: 50%;
-      transform: translate(calc(var(--size) / 5), calc(var(--size) / 10));
-      filter: blur(calc(var(--size) / 60)); }
-  .bubble--popped > .bubble__display {
-    transform: scale(2) translateY(1rem);
-    opacity: 0; }
-
+      height: var(--size);
+      width: var(--size);
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .bubble__display {
+        pointer-events: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        border: solid 1px rgba(255, 255, 255, 0.4);
+        transition: all 200ms;
+        height: 100%;
+        width: 100%; }
+        .bubble__display:after {
+          content: ' ';
+          display: block;
+          background-color: #fff;
+          height: var(--size-highlight);
+          width: var(--size-highlight);
+          border-radius: 50%;
+          transform: translate(calc(var(--size) / 5), calc(var(--size) / 10));
+          filter: blur(calc(var(--size) / 60)); }
+      .bubble--popped > .bubble__display {
+        transform: scale(2) translateY(1rem);
+        opacity: 0;
+  }
 </style>
+<div class="game-canvas" id="game-canvas">
+</div>
 <template id="bubble"><div class="bubble"><div class="bubble__display"></div></div></template>
 
-<script src="https://webmaker.app/app/lib/transpilers/babel-polyfill.min.js"></script><script>
+<script src="https://webmaker.app/app/lib/transpilers/babel-polyfill.min.js"></script>
+<script>
 'use strict';
 
-var bubbleTemplate = document.getElementById('bubble');
-var bubbles = times(40, value(createBubble));
+const bubbleTemplate = document.getElementById('bubble');
+const gameCanvas = document.getElementById('game-canvas');
+const bubbles = times(20, value(createBubble));
 gameLoop(withState({
      bubbles: bubbles
 }, update));
 
-document.body.addEventListener('pointermove', popBubble);
-document.body.addEventListener('pointerdown', popBubble);
+gameCanvas.addEventListener('pointermove', popBubble);
+gameCanvas.addEventListener('pointerdown', popBubble);
 
 function times(n, fn) {
-     var results = [];
-     for (var i = 0; i < n; i += 1) {
-          results.push(fn(null, i));
+     let results = []
+     for(let i = 0; i < n; i += 1) {
+          results.push(fn(null, i))
      }
 
-     return results;
+     return results
 }
 
 function value(fn) {
      return function noArgs() {
-          return fn();
-     };
+          return fn()
+     }
 }
 
-function createBubble() {
-     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-         _ref$x = _ref.x,
-         x = _ref$x === undefined ? Math.random() * document.body.clientWidth : _ref$x,
-         _ref$y = _ref.y,
-         y = _ref$y === undefined ? document.body.clientHeight + Math.random() * 200 : _ref$y,
-         _ref$speed = _ref.speed,
-         speed = _ref$speed === undefined ? 0.9 + Math.random() * 2 : _ref$speed,
-         _ref$size = _ref.size,
-         size = _ref$size === undefined ? 0.9 + Math.random() * 5 : _ref$size,
-         _ref$state = _ref.state,
-         state = _ref$state === undefined ? 'alive' : _ref$state,
-         _ref$updateOffset = _ref.updateOffset,
-         updateOffset = _ref$updateOffset === undefined ? getUpdateOffset() : _ref$updateOffset;
+function createBubble({
+     x = gameCanvas.offsetLeft + Math.random() * gameCanvas.offsetWidth,
+     y = gameCanvas.offsetTop + gameCanvas.offsetHeight + Math.random() * 200,
+     speed = 0.9 + Math.random() * 2,
+     size = 0.9 + Math.random() * 5,
+     state = 'alive',
+     updateOffset = getUpdateOffset()} = {}){
 
-     var bubble = bubbleTemplate.content.cloneNode(true).firstChild;
-     bubble.dataset.speed = speed;
-     bubble.dataset.state = state;
-     bubble.dataset.xOffset = updateOffset;
-     bubble = moveTo({ x: x, y: y }, bubble);
-     bubble.dataset.speed = speed;
-     bubble.style.setProperty('--size', size + 'rem');
-     document.body.appendChild(bubble);
-     return bubble;
+     let bubble = bubbleTemplate.content.cloneNode(true).firstChild
+     bubble.dataset.speed = speed
+     bubble.dataset.state = state
+     bubble.dataset.xOffset = updateOffset
+     bubble = moveTo({x,y}, bubble)
+     bubble.dataset.speed = speed
+     bubble.style.setProperty('--size', `${size}rem`)
+     gameCanvas.appendChild(bubble)
+     return bubble
 }
 
-function moveTo(_ref2, bubble) {
-     var _ref2$x = _ref2.x,
-         x = _ref2$x === undefined ? 1 : _ref2$x,
-         _ref2$y = _ref2.y,
-         y = _ref2$y === undefined ? 1 : _ref2$y;
+function moveTo({x = 1, y = 1}, bubble) {
+     bubble.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px)`
 
-     bubble.style.transform = 'translate(' + Math.round(x) + 'px, ' + Math.round(y) + 'px)';
-
-     return bubble;
+     return bubble
 }
 
-function update(_ref3) {
-     var bubbles = _ref3.bubbles;
-
-     bubbles = bubbles.map(updateBubble);
-     return { bubbles: bubbles };
+function update({bubbles}) {
+  bubbles = bubbles.map(updateBubble)
+  return {bubbles}
 }
 
 function updateBubble(bubble) {
-     var rect = bubble.getBoundingClientRect();
-     var belowTop = rect.y > 0 - rect.height;
-     if (!belowTop || bubble.dataset.state == 'popped') {
-          bubble = resetBubble(bubble);
+     let rect = bubble.getBoundingClientRect()
+     let belowTop = rect.y > gameCanvas.offsetTop - rect.height
+     if(!belowTop || bubble.dataset.state == 'popped'){
+          bubble = resetBubble(bubble)
      } else {
-          var x = rect.x + parseFloat(bubble.dataset.xOffset);
-          var y = rect.y - bubble.dataset.speed;
-          bubble = moveTo({ x: x, y: y }, bubble);
+          let x = rect.x + parseFloat(bubble.dataset.xOffset)
+          let y = rect.y - bubble.dataset.speed
+          bubble = moveTo({x,y}, bubble)
      }
-     return bubble;
+     return bubble
 }
 
 function withState(state, fn) {
-     return function changeState() {
-          state = fn(state);
-     };
+  return function changeState() {
+    state = fn(state)
+  }
 }
 
+
 function gameLoop(fn) {
-     requestAnimationFrame(gameLoop.bind(null, fn));
-     fn();
+  requestAnimationFrame(gameLoop.bind(null, fn))
+  fn()
 }
 
 function resetBubble(bubble) {
-     var x = Math.random() * document.body.clientWidth;
-     var y = document.body.clientHeight;
-     var speed = 0.9 + Math.random() * 2;
-     var size = 0.9 + Math.random() * 5;
-     var updateOffset = getUpdateOffset();
-     bubble.dataset.speed = speed;
-     bubble.dataset.state = 'alive';
-     bubble.dataset.xOffset = updateOffset;
-     bubble.style.setProperty('--size', size + 'rem');
-     bubble.className = 'bubble';
-     bubble = moveTo({ x: x, y: y }, bubble);
-     return bubble;
+     let x = gameCanvas.offsetLeft + Math.random() * gameCanvas.offsetWidth
+     let y = gameCanvas.offsetTop + gameCanvas.offsetHeight
+     let speed = 0.9 + Math.random() * 2
+     let size = 0.9 + Math.random() * 5
+     let updateOffset = getUpdateOffset()
+     bubble.dataset.speed = speed
+     bubble.dataset.state = 'alive'
+     bubble.dataset.xOffset = updateOffset
+     bubble.style.setProperty('--size', `${size}rem`)
+     bubble.className = 'bubble'
+     bubble = moveTo({x,y}, bubble)
+     return bubble
 }
 
 function getUpdateOffset() {
-     return (Math.random() - 0.5) * 0.9;
+     return (Math.random() - 0.5) * 0.9
 }
 
 function popBubble(ev) {
-     var el = ev.target;
-     if (el.classList.contains('bubble')) {
-          el.dataset.state = 'popping';
-          el.classList.add('bubble--popped');
-          el.addEventListener('transitionend', setPopped);
+     let el = ev.target
+     if(el.classList.contains('bubble')){
+          el.dataset.state = 'popping'
+          el.classList.add('bubble--popped')
+          el.addEventListener('transitionend',setPopped)
      }
 }
 
 function setPopped(ev) {
-     ev.target.dataset.state = 'popped';
+     ev.target.dataset.state = 'popped'
 }
 //# sourceURL=userscript.js
 </script>
