@@ -4,6 +4,18 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: src/site/index.11ty.js
+  label: Home page
+  match: "**/*"
+- type: document
+  path: src/site/contact.html
+  label: contact page
+  match: "**/*"
+- type: document
+  path: src/site/404.md
+  label: 404 page
+  match: "**/*"
 - type: directory
   path: src/site/usa-2020
   label: USA 2020
