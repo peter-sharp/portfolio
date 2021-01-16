@@ -9,16 +9,22 @@ sections:
   label: USA 2020
   create: all
   match: "**/*"
+  templates:
+  - usa-2020-post
 - type: directory
   path: src/site/sketches
   label: Sketches
   create: all
   match: "**/*"
+  templates:
+  - sketch
 - type: directory
   path: src/site/gallery
   label: Gallery
   create: all
   match: "**/*"
+  templates:
+  - gallery-item
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
