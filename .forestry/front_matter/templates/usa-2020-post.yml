@@ -1,0 +1,7 @@
+---
+label: USA 2020 post
+hide_body: false
+fields:
+- type: datetime
+  name: date
+  label: date
