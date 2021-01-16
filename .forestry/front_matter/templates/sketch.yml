@@ -1,0 +1,26 @@
+---
+label: Sketch
+hide_body: false
+fields:
+- type: datetime
+  name: age
+  label: age
+- type: text
+  name: title
+  label: title
+- type: text
+  name: thumbnail
+  label: thumbnail
+- type: list
+  name: tags
+  label: tags
+- type: field_group
+  name: mediaPaths
+  label: mediaPaths
+  fields:
+  - type: file
+    name: original
+    label: original
+  - type: file
+    name: thumbnail
+    label: thumbnail
