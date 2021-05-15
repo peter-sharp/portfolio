@@ -24,8 +24,8 @@ return html`
                 <h1 class="site-title">
                   ${raw(this.svgContents('/src/site/logo.svg', 'site-logo'))}<span class="site-title__text">Peter Sharp</span>
                 </h1>
-                <nav class="nav-main">
-                    <ul class="nav-main__items">
+                <nav class="site-nav">
+                    <ul class="site-nav__items">
                         ${reverse(collections.mainMenu).map(
                             ({ data, url: itemUrl }) => html`
                                 <li
