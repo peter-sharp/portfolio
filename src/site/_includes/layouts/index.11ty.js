@@ -56,7 +56,7 @@ return html`
             </footer>
         </body>
     </html>
-`.toString();
+`
 }
 
 function reverse(arr) {
