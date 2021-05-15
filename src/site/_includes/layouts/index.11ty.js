@@ -51,7 +51,7 @@ return html`
             </main>
             <footer class="section sticky-footer__footer">
                 <div class="">
-                    <a href="/contact">Send me a telegram</a>
+                    <a href="/contact">Hire me</a>
                 </div>
             </footer>
         </body>
