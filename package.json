@@ -1,7 +1,7 @@
 {
   "name": "peter-sharp-portfolio",
   "version": "1.0.0",
-  "description": "My portfolio using gituhb as a backend",
+  "description": "My portfolio using github as a backend",
   "main": "js/bundle.js",
   "engines": {
     "node": ">=10"
