@@ -5,6 +5,7 @@
   --color-grey-900: #4f483c;
   --color-grey-850: #bcb893;
   --color-grey-100: #faeab5;
+  --color-grey-50: #fff0d5;
   --color-grey-0: #fff;
 }
 
@@ -129,8 +130,10 @@ figure {
     flex: 1 0 18em;
     width: 18em;
     max-width: calc(50% - var(--gap));
-	border-bottom: 0.1em solid #4e7288;
-	border-bottom-color: var(--color-grey-900);
+}
+
+.card {
+    position: relative;
 }
 
 .card__image {
@@ -138,22 +141,23 @@ figure {
 }
 
 .card__image-clip {
+
+    box-sizing: border-box;
+    display: inline-block;
     max-height: 18em;
     overflow-y: hidden;
     /* HACK fixes flexbox accounting for clipped contents */
-    display: inline-block;
     width: 100%;
 }
 
 .card__title {
     color: #15181e;
     color: var(--color-grey-900);
-    padding: 0 0.4em 0.2em 0.4em;
+    line-height: 1;
 }
 /* TODO revise revise naming */
 .card__image-placeholder {
     width: 100%;
-    max-width: 18em;
     height: 13em;
     background-color: #4e7288;
     background-color: var(--color-grey-900);
@@ -170,9 +174,18 @@ figure {
     background-size:20px 20px;
     background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
-.card__image,
-.card__image-placeholder {
-    border-bottom: solid 0.1em var(--color-grey-900);
+
+.card__link {
+
+    color: var(--color-grey-900);
+}
+.card__link::after {
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 
