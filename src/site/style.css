@@ -124,7 +124,7 @@ figure {
 }
 
 .gallery {
-    align-items: baseline;
+    align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
