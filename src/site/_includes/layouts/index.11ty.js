@@ -22,7 +22,9 @@ return html`
         <body class="sticky-footer stack stack--gap-large">
             <header class="site-header">
                 <h1 class="site-title">
+                  <a href="/" class="site-title__link">
                   ${raw(this.svgContents('/src/site/logo.svg', 'site-logo'))}<span class="site-title__text">Peter Sharp</span>
+                  </a>
                 </h1>
                 <nav class="site-nav">
                     <ul class="site-nav__items">
