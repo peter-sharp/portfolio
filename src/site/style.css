@@ -177,7 +177,9 @@ figure {
     background-color: var(--color-grey-850);
     display: flex;
     justify-content: center;
+    min-height: 6em;
 }
+
 
 .card__title {
     color: #15181e;
