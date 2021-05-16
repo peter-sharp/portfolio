@@ -15,8 +15,8 @@ module.exports.render = function render({ content, mediaPaths, title, page }) {
        
          ${
         mediaPaths ? html`<figure>
-            <a href="/uploads/${mediaPaths.original}">
-              <img class="image--responsive-restricted" src="/uploads/${mediaPaths.original}">
+            <a href="/uploads/${mediaPaths.original}" class="image-wrapper">
+              <img class="image--responsive-restricted image-wrapper__img" src="/uploads/${mediaPaths.original}">
             </a>
             <figcaption>${raw(content)}</figcaption>
         </figure>

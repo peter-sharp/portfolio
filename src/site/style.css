@@ -167,12 +167,16 @@ figure {
 
 /* HACK gallery__card--featured__image-clip */
 .featured-card__image-clip {
-    align-items: center;
     display: inline-flex;
-    justify-content: center;
     max-height: max-content;
+}
+
+.image-wrapper {
+    align-items: center;
     background-color: #bcb893;
     background-color: var(--color-grey-850);
+    display: flex;
+    justify-content: center;
 }
 
 .card__title {

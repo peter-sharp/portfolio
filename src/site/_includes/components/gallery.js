@@ -7,7 +7,7 @@ module.exports = function gallery(items) {
                       const id = data.id || `gallery_item_${i}`;
                      return html`
                     <li class="gallery__card ${data.featured && 'featured-card'} card stack stack--gap-small" id="${id}">
-                            <div class="card__image-clip ${data.featured && 'featured-card__image-clip'}">
+                            <div class="card__image-clip ${data.featured && 'featured-card__image-clip image-wrapper'}">
                             ${data.mediaPaths ?
                          html`<img class="card__image" src="/uploads/${data.featured ? data.mediaPaths.original : data.mediaPaths.thumbnail || data.mediaPaths.original}" alt="${data.title}"/>` :
                         html`<div class="card__image-placeholder"></div>`}
