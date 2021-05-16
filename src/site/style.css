@@ -138,22 +138,40 @@ figure {
     max-width: calc(50% - var(--gap));
 }
 
+
+
 .card {
     position: relative;
 }
 
 .card__image {
-    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
 }
 
 .card__image-clip {
-
     box-sizing: border-box;
-    display: inline-block;
     max-height: 18em;
     overflow-y: hidden;
     /* HACK fixes flexbox accounting for clipped contents */
     width: 100%;
+}
+
+/* for full-width gallery items */
+/* HACK gallery__card--featured */
+.featured-card {
+    min-width: 100%;
+}
+
+/* HACK gallery__card--featured__image-clip */
+.featured-card__image-clip {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    max-height: max-content;
+    background-color: #bcb893;
+    background-color: var(--color-grey-850);
 }
 
 .card__title {
@@ -197,13 +215,10 @@ figure {
 
 .gallery {
     --gap: 3em;
-    margin-left: -3em;
-    margin-left: calc(var(--gap) * -1);
-    overflow: hidden;
 }
 .gallery__card {
-    margin-left: 3em;
-    margin-left: var(--gap);
+    margin-right: 3em;
+    margin-right: var(--gap);
     margin-bottom: 3em;
     margin-bottom: var(--gap);
 }
