@@ -1,0 +1,48 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: document
+  path: src/site/index.11ty.js
+  label: Home page
+- type: document
+  path: src/site/contact.html
+  label: contact page
+- type: document
+  path: src/site/404.md
+  label: 404 page
+- type: directory
+  path: src/site/usa-2020
+  label: USA 2020
+  create: all
+  match: "**/*"
+  templates:
+  - usa-2020-post
+- type: directory
+  path: src/site/sketches
+  label: Sketches
+  create: all
+  match: "**/*"
+  templates:
+  - sketch
+- type: directory
+  path: src/site/gallery
+  label: Gallery
+  create: all
+  match: "**/*"
+  templates:
+  - gallery-item
+upload_dir: src/site/uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_output_directory: _site
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run dev
