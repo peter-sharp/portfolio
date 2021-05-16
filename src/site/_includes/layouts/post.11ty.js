@@ -9,18 +9,18 @@ module.exports.data = {
 
 module.exports.render = function render({ content, mediaPaths, title, page }) {
   
-    return html`<div class="section">
-        <div class="section__inside">
+    return html`<div  class="section">
+      
         ${breadcrumbs([title, getCollectionLink(page.filePathStem)])}
+       
          ${
         mediaPaths ? html`<figure>
             <a href="/uploads/${mediaPaths.original}">
-              <img class="image--responsive" src="/uploads/${mediaPaths.original}">
+              <img class="image--responsive-restricted" src="/uploads/${mediaPaths.original}">
             </a>
             <figcaption>${raw(content)}</figcaption>
         </figure>
-         ` : html`${raw(content)}</div>`
+         ` : html`${raw(content)}`
     }
-    </div>
     </div>`.toString()
 }
