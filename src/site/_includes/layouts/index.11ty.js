@@ -19,7 +19,7 @@ return html`
             <base href="/" />
             <link rel="stylesheet" href="/style.css" />
         </head>
-        <body class="sticky-footer stack stack--gap-large">
+        <body class="sticky-footer stack stack--gap-medium">
             <header class="site-header">
                 <h1 class="site-title">
                   <a href="/" class="site-title__link">

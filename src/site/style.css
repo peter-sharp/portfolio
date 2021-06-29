@@ -54,6 +54,12 @@ h3 {
     margin: 0;
 }
 
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 button {
     font-size: 1.1em;
     background: transparent;
@@ -113,7 +119,8 @@ figure {
 }
 
 .section {
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 .section__inside {
     margin: auto;
