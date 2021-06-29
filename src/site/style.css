@@ -398,6 +398,7 @@ figure {
   text-align: center;
   display: flex;
   align-items: center;
+  font-size: 1.1em;
 }
 .site-title__link {
     color: inherit;
