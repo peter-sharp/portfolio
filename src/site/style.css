@@ -4,6 +4,7 @@
   --color-accent2: #FAD961;
   --color-grey-900: #4f483c;
   --color-grey-850: #bcb893;
+  --color-grey-200: #eccf9b;
   --color-grey-100: #faeab5;
   --color-grey-50: #fff0d5;
   --color-grey-0: #fff;
@@ -231,8 +232,8 @@ figure {
 }
 
 .site-header {
-  border-bottom: 0.1em solid #15181e;
-  border-bottom-color: var(--color-grey-900);
+  border-bottom: 0.1em solid #eccf9b;
+  border-bottom-color: var(--color-grey-200);
   display: flex;
   justify-content: space-between;
 }
@@ -290,8 +291,8 @@ figure {
     background: #ced9e4;
     background: linear-gradient(45deg, transparent 45%, #ced9e4 45%);
     background: linear-gradient(45deg, transparent 45%, var(--color-grey-100) 45%);
-    border: 0.1em solid #15181e;
-    border-color: var(--color-grey-900);
+    border: 0.1em solid  #eccf9b;
+    border-color: var(--color-grey-200);
     border-left-color: transparent;
     border-bottom-color: transparent;
     display: flex;
@@ -305,10 +306,10 @@ figure {
 }
 
 .cursor__inner {
-    background: linear-gradient(45deg, #15181e 0%, #15181e 50%, transparent 51% );
-    background: linear-gradient(45deg, var(--color-grey-900) 0%, var(--color-grey-900) 50%, transparent 51% );
-    border: 0.1em solid #15181e;
-    border-color: var(--color-grey-900);
+    background: linear-gradient(45deg, #eccf9b 0%, #eccf9b 50%, transparent 51% );
+    background: linear-gradient(45deg, var(--color-grey-200) 0%, var(--color-grey-200) 50%, transparent 51% );
+    border: 0.1em solid #eccf9b;
+    border-color: var(--color-grey-200);
     height: 0.4em;
     width: 0.4em;
 }
