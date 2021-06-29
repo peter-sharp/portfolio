@@ -9,7 +9,7 @@ module.exports.data = {
 }
 
 module.exports.render = function render({ collections }) {
-    return html`<div class="section">
+    return html`<div>
             ${gallery(collections.sketch)}
         </div>`.toString()
 }

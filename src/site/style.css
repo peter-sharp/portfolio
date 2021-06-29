@@ -124,6 +124,7 @@ figure {
     width: 100%;
 }
 
+/* gallery */
 .gallery {
     align-items: flex-start;
     display: flex;
@@ -131,12 +132,13 @@ figure {
     flex-direction: row;
     justify-content: space-between;
     list-style-type: none;
-    padding-left: 0;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
 }
 
 .gallery__card {
     flex: 1 0 18em;
-    width: 18em;
+    max-width: 18em;
     max-width: calc(50% - var(--gap));
 }
 
@@ -148,11 +150,11 @@ figure {
 
 .card__image {
     height: auto;
-    max-width: 100%;
-    max-height: 80vh;
+    width: 100%;
 }
 
 .card__image-clip {
+    display: block;
     box-sizing: border-box;
     max-height: 18em;
     overflow-y: hidden;
@@ -222,12 +224,14 @@ figure {
 
 
 .gallery {
-    --gap: 3em;
+    --gap: 1em;
 }
 .gallery__card {
-    margin-right: 3em;
-    margin-right: var(--gap);
-    margin-bottom: 3em;
+    margin-right: 0.5;
+    margin-right: calc(var(--gap) / 2);
+    margin-left: 0.5;
+    margin-left: calc(var(--gap) / 2);
+    margin-bottom: 1em;
     margin-bottom: var(--gap);
 }
 
@@ -416,6 +420,16 @@ figure {
 	width: 0.8em;
 	height: auto;
 	vertical-align: baseline;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
 }
 
 @media all and (max-width: 600px) {

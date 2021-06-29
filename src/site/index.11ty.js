@@ -10,7 +10,7 @@ module.exports.data = {
 
 module.exports.render = function render({ collections }) {
     return html`<div>
-        <div class="section">
+        <div>
             ${gallery(collections.gallery)}
         </div>
         <article class="h-card section">
