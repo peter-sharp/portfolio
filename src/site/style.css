@@ -11,15 +11,16 @@
 }
 
 html, body {
-    height: 100%;
+    height: 100%; /* needed for sticky footer */
+    overflow: auto;
 }
 
 body {
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     margin: 0;
-    background-color: #ced9e4;
-    background-color: var(--color-grey-100);
+    background-color: #faeab5;
+    background: linear-gradient(var(--color-grey-100), var(--color-grey-200));
     color: #4e7288;
     color: var(--color-grey-900);
 }
