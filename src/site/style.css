@@ -88,6 +88,11 @@ figure {
     flex-shrink: 0;
 }
 
+.site-footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 .stack > *:not(script):not(style) + * {
     margin-top: 1em;
 }

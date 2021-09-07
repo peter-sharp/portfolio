@@ -51,7 +51,7 @@ return html`
             <main class="sticky-footer__content">
                 ${raw(content)}
             </main>
-            <footer class="section sticky-footer__footer">
+            <footer class="section site-footer sticky-footer__footer">
                 <div class="">
                     <a href="/contact">Hire me</a>
                 </div>
