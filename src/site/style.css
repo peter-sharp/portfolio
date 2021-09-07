@@ -88,7 +88,6 @@ figure {
 }
 
 .stack > *:not(script):not(style) + * {
-    display: block;
     margin-top: 1em;
 }
 
@@ -156,6 +155,7 @@ figure {
 }
 
 .card__image {
+    display: block;
     height: auto;
     width: 100%;
 }
@@ -437,6 +437,10 @@ figure {
   position: absolute;
   white-space: nowrap; 
   width: 1px;
+}
+
+.hide-next + * {
+    display: none;
 }
 
 @media all and (max-width: 600px) {
