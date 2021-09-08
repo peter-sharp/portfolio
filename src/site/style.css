@@ -1,6 +1,7 @@
 :root {
   --font-scale-1: 0.8em;
   --color-primary: #F76B1C;
+  --color-primary-400: #f13b1a;
   --color-accent2: #FAD961;
   --color-grey-900: #4f483c;
   --color-grey-850: #bcb893;
@@ -61,14 +62,17 @@ ol {
     margin-bottom: 0;
 }
 
+.button,
 button {
     font-size: 1.1em;
     background: transparent;
     padding: 0.6em;
-    border: solid 0.1em #4e7288;
-    border-color: var(--color-grey-900);
-    color: #4e7288;
+    border: solid 0.1em #4f483c;
+    border-color: currentColor;
+    color: #4f483c;
     color: var(--color-grey-900);
+    display: inline-block;
+    transition: all 230ms ease;
 }
 
 figure {
@@ -131,9 +135,29 @@ figure {
     margin: auto;
     max-width: 70ch;
 }
+
 .input-group > textarea,
 .input-group > input {
     width: 100%;
+}
+
+button[data-state="primary"],
+.button[data-state="primary"] {
+    --color: var(--color-primary);
+    border-color: #F76B1C;
+    border-color: var(--color);
+    background-color: #F76B1C;
+    background-color: var(--color);
+    color:var(--color-grey-0);
+}
+
+button[data-state="primary"]:hover,
+button[data-state="primary"]:focus,
+.button[data-state="primary"]:hover,
+.button[data-state="primary"]:focus {
+    border-color: var(--color-primary-400);
+    background-color: transparent;
+    color: var(--color-primary-400);
 }
 
 /* gallery */

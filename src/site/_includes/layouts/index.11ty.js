@@ -53,7 +53,7 @@ return html`
             </main>
             <footer class="section site-footer sticky-footer__footer">
                 <div class="">
-                    <a href="/contact">Hire me</a>
+                    <a href="/contact" class="button" >Hire me</a>
                 </div>
             </footer>
         </body>
