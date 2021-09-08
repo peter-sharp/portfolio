@@ -5,11 +5,17 @@ tags: page
 layout: layouts/index.11ty.js
 ---
 <div class="section">
-    <div class="section__inside stack">
-        <p>
-        Send me a message; </br>I'd love to hear from you.
-        </p>
-
+    <div class="section__inside stack" data-gap="medium">
+        <div class="cluster" data-state="align-middle">
+            <div>
+                <div class="user-icon-frame" data-state="pull-left">
+                    <img class="u-logo image--responsive user-icon-frame__image" src="/uploads/peter-like-a-sir.png" />
+                </div>
+            </div>
+            <p>
+            Send me a message! </br>I'd love to hear from you.
+            </p>
+        </div>
         <form name="contact" class="contact stack" method="post" data-netlify="true" netlify-honeypot="email">
             <div class="input-group hide-next">
                 <label for="contact_name">Name<span class="required">*</span></label>

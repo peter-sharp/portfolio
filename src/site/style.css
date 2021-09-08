@@ -101,15 +101,27 @@ figure {
     margin-top: 1em;
 }
 
+.stack[data-gap="small"] > *:not(script):not(style) + *,
 .stack--gap-small > *:not(script):not(style) + * {
     margin-top: 0.4em;
 }
 
+.stack[data-gap="medium"] > *:not(script):not(style) + *,
 .stack--gap-medium > *:not(script):not(style) + * {
     margin-top: 2em;
 }
+.stack[data-gap="large"] > *:not(script):not(style) + *,
 .stack--gap-large > *:not(script):not(style) + * {
     margin-top: 4em;
+}
+
+.cluster > * {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.cluster[data-state="align-middle"] > * {
+    vertical-align: middle;
 }
 
 .image--responsive-restricted {
@@ -416,6 +428,10 @@ button[data-state="primary"]:focus,
     position: relative;
     margin: 1em;
     width: 4em;
+}
+.user-icon-frame[data-state="pull-left"] {
+    right: 3.3em;
+    margin-right: -2.6em;
 }
 
 .user-icon-frame::after {
