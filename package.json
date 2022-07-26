@@ -4,7 +4,7 @@
     "description": "My portfolio using github as a backend",
     "main": "js/bundle.js",
     "engines": {
-        "node": ">=10"
+        "node": ">=12"
     },
     "scripts": {
         "start": "eleventy --serve",
