@@ -178,7 +178,7 @@ button[data-state="primary"]:focus,
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     list-style-type: none;
     padding-right: 0.5em;
     padding-left: 0.5em;
@@ -187,7 +187,7 @@ button[data-state="primary"]:focus,
 .gallery__card {
     flex: 1 0 16em;
     max-width: 16em;
-    max-width: calc(25% - var(--gap));
+    max-width: calc(20% - var(--gap));
 }
 
 
@@ -487,6 +487,12 @@ button[data-state="primary"]:focus,
 
 .hide-next + * {
     display: none;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media all and (max-width: 600px) {
