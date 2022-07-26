@@ -52,9 +52,8 @@ return html`
                 ${raw(content)}
             </main>
             <footer class="section site-footer sticky-footer__footer">
-                <div class="">
-                    <a href="/contact" class="button" >Hire me</a>
-                </div>
+                <a href="https://petersharp.dev">Web development</a>
+                <a href="https://github.com/peter-sharp">Github</a>
             </footer>
         </body>
     </html>

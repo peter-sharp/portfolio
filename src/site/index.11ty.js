@@ -9,7 +9,7 @@ module.exports.data = {
 }
 
 module.exports.render = function render({ collections }) {
-    return html`<div>
+    return html`<div class="stack" data-gap="large">
         <div>
             ${gallery(collections.gallery)}
         </div>
@@ -21,5 +21,9 @@ module.exports.render = function render({ collections }) {
                 <figcaption>I'm <span class="p-name">Peter</span> developer, designer and creative. This my space to show off my creative work.</figcaption>
             </figure>
         </article>
+        <div class="cluster section">
+            <p>Need help with illustration or design?</p>
+            <a href="/contact" class="button" >Hire me</a>
+        </div>
     </div>`.toString()
 }
