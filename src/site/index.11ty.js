@@ -18,7 +18,7 @@ module.exports.render = function render({ collections }) {
                 <div class="user-icon-frame">
                     <img class="u-logo image--responsive user-icon-frame__image" src="/uploads/peter-like-a-sir.png"/>
                 </div>
-                <figcaption>I'm <span class="p-name">Peter</span> </figcaption>
+                <figcaption>I'm <span class="p-name">Peter</span> developer, designer and creative. This my space to show off my creative work.</figcaption>
             </figure>
         </article>
     </div>`.toString()
