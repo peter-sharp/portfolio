@@ -3,9 +3,6 @@
     "version": "1.0.0",
     "description": "My portfolio using github as a backend",
     "main": "js/bundle.js",
-    "engines": {
-        "node": ">=12"
-    },
     "scripts": {
         "start": "eleventy --serve",
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -33,7 +30,7 @@
     },
     "homepage": "https://github.com/peter-sharp/peter-sharp-portfolio#readme",
     "devDependencies": {
-        "@11ty/eleventy": "^1.0.1",
+        "@11ty/eleventy": "^1.0.0",
         "@oclif/errors": "^1.2.2",
         "@octokit/core": "^3.1.4",
         "@octokit/endpoint": "^5.5.1",
