@@ -6,7 +6,6 @@ thumbnail: ''
 tags:
   - painting
   - design
-  - sketch
 mediaPaths:
   original: okinawa-cafe.jpg
   thumbnail: sizes/thumbnail/okinawa-cafe.jpg

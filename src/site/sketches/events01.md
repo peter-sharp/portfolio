@@ -10,7 +10,6 @@ tags:
   - illustration
   - character
   - digital
-  - gallery
 mediaPaths:
   original: 50th-invite.png
   thumbnail: sizes/thumbnail/50th-invite.png

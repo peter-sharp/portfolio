@@ -12,7 +12,6 @@ tags:
   - unvanquished
   - digital
   - game
-  - sketch
 mediaPaths:
   original: Defence-computer_concepts.1.png
   thumbnail: sizes/thumbnail/Defence-computer_concepts.1.png

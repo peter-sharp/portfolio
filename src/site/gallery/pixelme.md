@@ -7,7 +7,6 @@ tags:
   - pixel art
   - self portrait
   - Inkscape
-  - sketch
 mediaPaths:
   original: pixelme.png
   thumbnail: sizes/thumbnail/pixelme.png
