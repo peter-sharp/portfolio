@@ -18,7 +18,7 @@
         "image-folders:medium": "shx mkdir -p ./_site/uploads/sizes/medium",
         "image-folders:large": "shx mkdir -p ./_site/uploads/sizes/large",
         "images": "npm-run-all -s image-folders:* images:*",
-        "images:thumbnail": "sharp -i \"./src/site/uploads/**/*.{jpg,png}\" -o \"./_site/uploads/sizes/thumbnail\" resize 324 --fit=inside",
+        "images:thumbnail": "sharp -i \"./src/site/uploads/**/*.{jpg,png,gif}\" -o \"./_site/uploads/sizes/thumbnail\" resize 324 --fit=inside",
         "dev": "pnpx run-p dev:*",
         "dev:lambda": "pnpx netlify dev"
     },
